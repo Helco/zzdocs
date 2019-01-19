@@ -1,3 +1,10 @@
 site_name: Zanzarah Knowledge Base
 theme:
   name: 'material'
+  custom_dir: 'custom_dir/'
+markdown_extensions:
+  - wikilinks:
+      base_url: ''
+      end_url: '.md'
+  - toc:
+      permalink: true
