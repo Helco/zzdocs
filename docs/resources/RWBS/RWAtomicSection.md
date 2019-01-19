@@ -1,6 +1,6 @@
-## RWAtomicSection (0x0009)
+# RWAtomicSection (0x0009)
 
-This section is used to define a piece of the world geometry, it is usually child of a [[RWPlaneSection|RWPlaneSection]] and propagated through other [[RWPlaneSection|RWPlaneSection]] to a [[RWWorld|RWWorld]] section. 
+This section is used to define a piece of the world geometry, it is usually child of a [[RWPlaneSection]] and propagated through other [[RWPlaneSection]] to a [[RWWorld]] section.
 
 The format of this section was decrypted by [kabbi](https://github.com/kabbi/zanzarah-tools/blob/master/bsp-parser.coffee#L180).
 
@@ -46,6 +46,6 @@ The format of this section was decrypted by [kabbi](https://github.com/kabbi/zan
 
 ## Possible child sections
 
-* [[RWExtension|RWExtension]]
-    * [[RWBinMeshPLG|RWBinMeshPLG]]
-    * [[RWCollisionPLG|RWCollisionPLG]]
+* [[RWExtension]]
+    * [[RWBinMeshPLG]]
+    * [[RWCollisionPLG]]

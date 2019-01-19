@@ -1,6 +1,6 @@
-## RWWorld (0x000B)
+# RWWorld (0x000B)
 
-The RWWorld section stores header information for the world geometry and is the root section of [[BSP files|BSP]]. The format was described by [kabbi](https://github.com/kabbi/zanzarah-tools/blob/master/bsp-parser.coffee#L101).
+The RWWorld section stores header information for the world geometry and is the root section of [[BSP files]]. The format was described by [kabbi](https://github.com/kabbi/zanzarah-tools/blob/master/bsp-parser.coffee#L101).
 
 ## Structure format
 
@@ -17,7 +17,7 @@ The RWWorld section stores header information for the world geometry and is the 
 |  4b  | uint | _colSectorSize_
 |  4b  | enum | _format_ (see below)
 
-### _format_ enum 
+### _format_ enum
 | Name            | Value    |
 |-----------------|----------|
 | Tristrip        |0x00000001|
@@ -34,7 +34,7 @@ The RWWorld section stores header information for the world geometry and is the 
 
 ## Possible child sections
 
-* [[RWMaterialList|RWMaterialList]]
-* [[RWPlaneSection|RWPlaneSection]]
-* [[RWAtomicSection|RWAtomicSection]]
-* [[RWExtension|RWExtension]]
+* [[RWMaterialList]]
+* [[RWPlaneSection]]
+* [[RWAtomicSection]]
+* [[RWExtension]]

@@ -1,8 +1,8 @@
-## RWGeometry (0x000F)
+# RWGeometry (0x000F)
 
 This section stores geometric data of models.
 
-It can be seen as child of [[RWGeometryList|RWGeometryList]] sections.
+It can be seen as child of [[RWGeometryList]] sections.
 
 ## Structure format
 
@@ -66,7 +66,7 @@ __optional__  only if  format does not contain Native :
 
 ## Possible child sections
 
-* [[RWMaterialList|RWMaterialList]]
-* [[RWExtension|RWExtension]]
-    * [[RWBinMeshPLG|RWBinMeshPLG]]
-    * [[RWMorphPLG|RWMorphPLG]]
+* [[RWMaterialList]]
+* [[RWExtension]]
+    * [[RWBinMeshPLG]]
+    * [[RWMorphPLG]]

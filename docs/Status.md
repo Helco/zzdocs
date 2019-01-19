@@ -1,5 +1,7 @@
-# Technical stuff
-## [[Renderware files|rwbs]]
+# Status
+
+## Technical stuff
+### [Renderware files](resources/RWBS/RWBS.md)
 
 | File extension | Reading | Writing | Render | Wiki | Exports | Imports |
 |----------------|:-------:|:-------:|:------:|:----:|---------|---------|
@@ -7,7 +9,7 @@
 | [[BSP (Worlds)|BSP]]     | Yes | No | Yes | Yes | JSON | None |
 | [[SKA (Animations)|SKA]] | Yes | No | Yes | Yes | JSON | None |
 
-## ZanZarah specific files
+### ZanZarah specific files
 
 | File extension | Reading | Writing | Render | Wiki | Exports | Imports |
 |----------------|:-------:|:-------:|:------:|:----:|---------|---------|

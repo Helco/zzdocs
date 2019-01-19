@@ -1,4 +1,4 @@
-## RWAtomic (0x0014)
+# RWAtomic (0x0014)
 
 `Atomic is a container section used in DFF files as child of a Clump section. It is normally accompanied by a Struct section. An atomic section can associate a Frame with a Geometry.` - [gtamodding](http://www.gtamodding.com/wiki/Atomic_(RW_Section))
 
@@ -13,6 +13,6 @@
 
 ## Possible child sections
 
-* [[RWGeometry|RWGeometry]]
-* [[RWExtension|RWExtension]]
-    * [[RWSkinPLG|RWSkinPLG]]
+* [[RWGeometry]]
+* [[RWExtension]]
+    - [[RWSkinPLG]]

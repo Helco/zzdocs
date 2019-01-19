@@ -1,8 +1,8 @@
-## RWMaterialList (0x0008)
+# RWMaterialList (0x0008)
 
-The material list section stores one or many [[RWMaterial|RWMaterial]] sections.
+The material list section stores one or many [[RWMaterial]] sections.
 
-It is usually the child of a [[RWGeometry|RWGeometry]] or [[RWWorld|RWWorld]] section.
+It is usually the child of a [[RWGeometry]] or [[RWWorld]] section.
 
 ## Structure format
 
@@ -15,4 +15,4 @@ It is usually the child of a [[RWGeometry|RWGeometry]] or [[RWWorld|RWWorld]] se
 
 ## Possible child sections
 
-* [[RWMaterial|RWMaterial]]
+* [[RWMaterial]]

@@ -1,8 +1,8 @@
-## RWAnimationPLG (0x0108)
+# RWAnimationPLG (0x0108)
 
-The RWAnimationPLG section is the most confusing section of all. [kabbi](https://github.com/kabbi/zanzarah-tools/blob/master/dff-parser.coffee#L126) does read it, but even to him it is apparently not understandable as he calls it the "strangeAnimData". I have to investigate this...
+The RWAnimationPLG section is the most confusing section of all, not much of it is understood at the moment.
 
-It can be seen as child of [[RWClump|RWClump]], as well as single child of the many [[RWExtension|RWExtension]] sections of [[RWClump|RWClump]]->[[RWFrameList|RWFrameList]].
+It can be seen as child of [[RWClump]], as well as single child of the many [[RWExtension]] sections of [[RWClump]]->[[RWFrameList]].
 
 ## Data format
 

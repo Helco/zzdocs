@@ -1,8 +1,8 @@
-## RWTexture (0x0006)
+# RWTexture (0x0006)
 
 `A texture section is used to store identifying information about a texture and it's alpha layer.` - [gtamodding](http://www.gtamodding.com/wiki/Texture_(RW_Section))
 
-It is usually the child of a [[RWMaterial|RWMaterial]] section. It has one to two [[RWString|RWString]] sections which define the color/alpha texture filename.
+It is usually the child of a [[RWMaterial]] section. It has one to two [[RWString]] sections which define the color/alpha texture filename.
 
 ## Structure format
 
@@ -14,7 +14,7 @@ It is usually the child of a [[RWMaterial|RWMaterial]] section. It has one to tw
 |15bit | uint | ___unused___
 
 ### _filterMode_ enum
-| Name             | Value    | 
+| Name             | Value    |
 |------------------|----------|
 | NAFilterMode     | 0
 | Nearest          | 1
@@ -24,8 +24,8 @@ It is usually the child of a [[RWMaterial|RWMaterial]] section. It has one to tw
 | LinearMipNearest | 5
 | LinearMipLinear  | 6
 
-### X addressing mode
-| Name             | Value    | 
+### U/V addressing mode
+| Name             | Value    |
 |------------------|----------|
 | NATextureAddresss| 0
 | Wrap             | 1
@@ -35,5 +35,5 @@ It is usually the child of a [[RWMaterial|RWMaterial]] section. It has one to tw
 
 ## Possible child sections
 
-* [[RWString|RWString]]
-* [[RWExtension|RWExtension]]
+* [[RWString]]
+* [[RWExtension]]

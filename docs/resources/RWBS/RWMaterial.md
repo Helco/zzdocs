@@ -1,8 +1,8 @@
-## RWMaterial (0x0007)
+# RWMaterial (0x0007)
 
 This section stores information about how the geometry should look like.
 
-It is usually the child of a [[RWMaterialList|RWMaterialList]] section.
+It is usually the child of a [[RWMaterialList]] section.
 
 ## Structure format
 
@@ -18,5 +18,5 @@ It is usually the child of a [[RWMaterialList|RWMaterialList]] section.
 
 ## Possible child sections
 
-* [[RWTexture|RWTexture]]
-* [[RWExtension|RWExtension]]
+* [[RWTexture]]
+* [[RWExtension]]

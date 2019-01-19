@@ -1,6 +1,6 @@
-## RWSkinPLG (0x0116)
+# RWSkinPLG (0x0116)
 
-The RWSkinPLG section describes the bones of an actor and how these react with the vertices of the model mesh. It is usually found as [[[RWExtension|RWExtension]] child of a [RWAtomic|RWAtomic]] section.
+The RWSkinPLG section describes the bones of an actor and how these react with the vertices of the model mesh. It is usually found as [[RWExtension]] child of a [[RWAtomic]] section.
 
 Here is a discrepancy between the format described by [gtamodding](http://www.gtamodding.com/wiki/Skin_PLG_(RW_Section)) and the one described by [kabbi](https://github.com/kabbi/zanzarah-tools/blob/master/dff-parser.coffee#L288). The differences are not compatible to each other, but the format by kabbi seems to work, so this is what I will using as well, even though it has some strange properties (see bone matrix).
 
