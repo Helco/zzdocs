@@ -12,8 +12,8 @@ Doorway triggers have three parameters:
 
 ## SingleplayerStartpoint
 
-The name of the SingleplayerStartpoint triggers are propably deprecated, as [[Doorway|Triggers#Doorway]] took their place. Nevertheless these triggers appear in each 
-overworld scene and in many duel scenes. In duel scenes their meaning is yet to be known (propably identical to [[MultiplayerStartpoint|Triggers#MultiplayerStartpoint]]),
+The name of the SingleplayerStartpoint triggers are propably deprecated, as [Doorway](#doorway) took their place. Nevertheless these triggers appear in each
+overworld scene and in many duel scenes. In duel scenes their meaning is yet to be known (propably identical to [MultiplayerStartpoint](#multiplayerstartpoint)),
 in overworld scenes however describes this trigger where to place the Amy if she was teleported by the console.
 
 ## NpcAttackPosition
@@ -21,7 +21,7 @@ in overworld scenes however describes this trigger where to place the Amy if she
 This trigger is mostly used for wild fairies to attack the player, but it is also used for a friendly fairy warning about wild ones and an elf wanting a fight.
 These are the parameters:
 
-1. The [[Npc UID|fb0x05]] to use, often just the dummy UID for wild fairies. The actual scripts are [[generated on runtime|Scripts#default-scripts]].
+1. The [NPC UID](../resources/FBS/fb0x05.md) to use, often just the dummy UID for wild fairies. The actual scripts are [generated on runtime](./Scripts.md#default-scripts).
 2. __unknown__ parameter (either 0, 1, 2, 3 or 50), seems to describe the condition on which the trigger is enabled
     - 0 or 2 uses the percentage in ii3
 3. The chance percentage whether the fairy does actually attack
@@ -78,17 +78,17 @@ Waypoints are connected by a set of rules:
 * Their group parameter (*ii2*) is the same
 * Their distance from each other is at max 7 units
 
-The first parameter seems to be some kind of Id, most likely to be used in [[Scripts|Scripts]].
+The first parameter seems to be some kind of Id, most likely to be used in [[Scripts]].
 The third parameter (*ii3*) is not null if it is selected as a target for a NPC.
 
 ## Animal
 
 Animals are non-interactive creatures wandering around the world of ZanZarah. *ii1* holds the animal type, while *ii2* and
-*ii3* are animal-specific parameters. See [[Animals|Animals]] for detailed information.
+*ii3* are animal-specific parameters. See [[Animals]] for detailed information.
 
 ## Platform
 
-Platform is used by [[CreatePlatforms|Triggers#CreatePlatforms-CreateItems]] trigger to state where the platforms should appear and how they should move.
+Platform is used by [CreatePlatforms](#createplatforms-createitems) trigger to state where the platforms should appear and how they should move.
 As model there is always ```g_plt00h``` used, *ii1* states the Behavior which is connected to the model.
 
 | Value |     Behavior     | Description |
@@ -100,11 +100,11 @@ As model there is always ```g_plt00h``` used, *ii1* states the Behavior which is
 
 ## CreatePlatforms CreateItems
 
-These trigger create on player collision either platforms or items, their respective triggers ([[Platform|Triggers#Platform]] and [[Item|Triggers#Item]]) describe the position.
+These trigger create on player collision either platforms or items, their respective triggers ([Platform](#platform) and [Item](#item)) describe the position.
 The effect used at trigger position is unknown yet, but for each platform/item the effect 4022 is used. If the game finds an *EventCamera* trigger, the view switches to it.
 The platforms/items appear after 1 second the player activated the trigger in a 0.3 second interval (so the first platform/item takes 1.3 seconds). The order they appear
 in is reverse to the order they are saved in the scene.
 
 ## Item
-Item is used by [[CreateItems|Triggers#CreatePlatforms-CreateItems]] trigger to state where and which items should appear. *ii1* is the id of the item. For coins and crystals,
+Item is used by [CreateItems](#createplatforms-createitems) trigger to state where and which items should appear. *ii1* is the id of the item. For coins and crystals,
 the Behavior *GenBehavior_EFF0* is used, for all other items *GenBehavior*.
