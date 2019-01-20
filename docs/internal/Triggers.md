@@ -1,4 +1,4 @@
-# Trigger behavior
+# Trigger behaviors
 
 This page lists trigger types and describes them in a bit more detail.
 
@@ -66,7 +66,7 @@ These are the parameters:
 
 ## CameraPosition
 
-CameraPosition triggers are used to set the camera view via scripts. For this the [```setCamera```](ScriptRef#setCamera) command is used.
+CameraPosition triggers are used to set the camera view via scripts. For this the [```setCamera```](./script commands/setCamera.md) command is used.
 The only parameter of this trigger is the Id of this CameraPosition.
 
 ## Waypoints

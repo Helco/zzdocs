@@ -1,4 +1,4 @@
-# Model Behaviors
+# Model behaviors
 
 This page lists certain special model behavior types and describes them in a bit more detail.
 

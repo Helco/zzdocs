@@ -1,8 +1,4 @@
-# Script reference
-
-This is the (uncomplete) reference of script commands.
-
-## setCamera
+# setCamera
 
 ```setCamera``` takes only a single numeric parameter, which determines where the camera should be located.
 As this command is only allowed for [[scriptsystem implementation|Scripts#Implementations]] 1 and 3, therefore there is always a Npc to reference.
@@ -27,4 +23,4 @@ As this command is only allowed for [[scriptsystem implementation|Scripts#Implem
 | 2100  | follow Npc |
 | 30XX  | at [[CameraPosition|Triggers#CameraPosition]] trigger XX (use trigger direction) |
 | 4000  | look at Npc |
-| 50XX  | at [[CameraPosition|Triggers#CameraPosition]] trigger XX (look at Npc) |
+| 50XX  | at [[CameraPosition|Triggers#CameraPosition]] trigger XX (look at Npc)

@@ -1,16 +1,16 @@
-# ScriptReference
+# Script language
 
 ## General information
-Every script is stored in the [[Database|FBS]]. There are 6 different locations a script may be stored:
+Every script is stored in the [database](../resources/FBS/index.md). There are 6 different locations a script may be stored:
 
-| Module | Column | [Impl.](#implementations) | Description |
-|:------:|:------:|:---:|-----------------------------------|
-| [[fb0x01|fb0x01]] | Script1 | 3 | This script is executed when the NPC is activated, it often contains dialog control |
-| [[fb0x01|fb0x01]] | Script2 | 1 | This script seems to be executed when the NPC is deployed, it mostly contains `setModel` instructions |
-| [[fb0x01|fb0x01]] | Script3 | 1 | This script seems to be executed on a cyclic basis, but the details are not known yet |
-| [[fb0x01|fb0x01]] | Script4 | 3 | This script is executed if the player wins a fight against the NPC |
-| [[fb0x01|fb0x01]] | Script5 | 3 | This script is executed if the player loses a fight against the NPC, mostly contains `killPlayer` instructions |
-| [[fb0x04|fb0x04]] | Script  | 2 | This script is executed when the item is used on some fairy. It does everything from healing to evolving |
+| Module                               | Column | [Impl.](#implementations) | Description |
+|:------------------------------------:|:------:|:---:|-----------------------------------|
+| [fb0x01](../resources/FBS/fb0x01.md) | Script1 | 3 | This script is executed when the NPC is activated, it often contains dialog control |
+| [fb0x01](../resources/FBS/fb0x01.md) | Script2 | 1 | This script seems to be executed when the NPC is deployed, it mostly contains `setModel` instructions |
+| [fb0x01](../resources/FBS/fb0x01.md) | Script3 | 1 | This script seems to be executed on a cyclic basis, but the details are not known yet |
+| [fb0x01](../resources/FBS/fb0x01.md) | Script4 | 3 | This script is executed if the player wins a fight against the NPC |
+| [fb0x01](../resources/FBS/fb0x01.md) | Script5 | 3 | This script is executed if the player loses a fight against the NPC, mostly contains `killPlayer` instructions |
+| [fb0x04](../resources/FBS/fb0x04.md) | Script  | 2 | This script is executed when the item is used on some fairy. It does everything from healing to evolving |
 
 ## General format
 ZanZarah scripts are written one command per line. The first character always denotes the command, after this there may be up to 3 arguments (decimal numbers or UIDs) seperated by a period.
@@ -77,7 +77,7 @@ exit
 enterWizform.0.1.1 //Viteria
 enterSpell.0.0.0
 enterSpell.0.1.60
-enterSpell.0.2.10 
+enterSpell.0.2.10
 enterSpell.0.3.70
 setNPCType.3
 enterWizform.1.15.1 //Rasrow
@@ -107,7 +107,7 @@ setNPCType.3
 exit
 ```
 
-## Reference
+## Commands
 
 | Char | Max args |          Name         | Description |
 |:----:|:--------:|-----------------------|-------------|
@@ -116,7 +116,7 @@ exit
 |  "   |     2    | choice                |
 |  #   |     0    | waitForUser           |
 |  $   |     1    | label                 |
-|  &   |     1    | setCamera             |
+|  &   |     1    | setCamera             | [see reference](./script commands/setCamera.md)
 |  %   |     0    | exit                  |
 |  '   |     3    | wizform               |
 |  (   |     3    | spell                 |
