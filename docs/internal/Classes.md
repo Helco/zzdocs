@@ -1,8 +1,8 @@
-## Classes
+# Element classes
 
 | Value | Internal name |
 |:-----:|---------------|
-|   0   | \<none>       |
+|   0   | __none__      |
 |   1   | Nature        |
 |   2   | Air           |
 |   3   | Water         |

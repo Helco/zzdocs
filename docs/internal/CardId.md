@@ -1,7 +1,9 @@
-## CardId
+# CardId
 
-### General information
-The CardId is used by ZanZarah to have a (or another) unique identifier to address items, fairies and spells. The CardId can be split up in three distinct numbers which hold information:
+The CardId is used by ZanZarah to have a (or another) unique identifier to address items, fairies and spells.
+
+## Format
+The CardId can be split up in three distinct numbers which hold information:
 
 | Bits  |                     Description                     |
 |-------|-----------------------------------------------------|

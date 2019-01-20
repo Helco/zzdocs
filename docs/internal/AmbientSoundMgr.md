@@ -1,6 +1,6 @@
-# AmbientSoundMgr
+# AmbientSounds
 
-The AmbientSoundMgr plays at random intervals 3D soundeffects near the player. The collection of sound files it uses is one of 17 hardcoded collections selected by the [[SCN_AmbientSound]] scene section. Also the interval it plays new sounds are hardcoded chances selected by the scene file.
+The AmbientSound Manager plays 3D soundeffects at random intervals near the player. The collection of sound files it uses is one of 17 hardcoded collections selected by the [AmbientSound](/resources/SCN/SCN_AmbientSound) scene section. Also the interval it plays new sounds are hardcoded chances selected by the scene file.
 
 ## Behaviour
 
