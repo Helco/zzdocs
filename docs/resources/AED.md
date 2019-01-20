@@ -1,6 +1,6 @@
-#  ActorEx Description
+#  AED
 
-ActorEx Description (AED) files are in Zanzarah mappings between body model, optional wings model and a set of animations per part. It is developed by Funatics, seen by the similar format for [[scene files|SCN]].
+ActorEx Description (AED) files are in Zanzarah mappings between body model, optional wings model and a set of animations per part. It is developed by Funatics, seen by the similar format for [scene files](./SCN/index.md).
 
 ## Data Format
 
@@ -13,12 +13,12 @@ ActorEx Description (AED) files are in Zanzarah mappings between body model, opt
 
 |       SectionName       |    Dataformat    |                                      Description                                      |
 |:-----------------------:|------------------|---------------------------------------------------------------------------------------|
-| ModelFilename_Body      | zstring          | The [[DFF|DFF]] file for the body                                                     |
+| ModelFilename_Body      | zstring          | The [[DFF]] file for the body                                                         |
 | AnimationPoolID_Body    | int32            | An unused ID for the animation pool                                                   |
-| AnimationFilename_Body  | zstring + enum   | A [[SKA|SKA]] in the body animation pool and its [[AnimationType|AED#AnimationType]]  |
-| ModelFilename_Wings     | zstring          | The [[DFF|DFF]] file for the (optional) wings                                         |
+| AnimationFilename_Body  | zstring + enum   | A [[SKA]] in the body animation pool and its [AnimationType](#animationtype)          |
+| ModelFilename_Wings     | zstring          | The [[DFF]] file for the (optional) wings                                             |
 | AnimationPoolID_Wings   | int32            | An unused ID for the animation pool                                                   |
-| AnimationFilename_Wings | zstring + enum   | A [[SKA|SKA]] in the wings animation pool and its [[AnimationType|AED#AnimationType]] |
+| AnimationFilename_Wings | zstring + enum   | A [[SKA]] in the wings animation pool and its [AnimationType](#animationtype)         |
 | AttachWingsToBone       | int32            | The bone ID of the body to attach the wings root bone to                              |
 | HeadBoneID              | int32            | The root head bone ID, usage yet to be known                                          |
 | EffectBoneID            | int32            | The bone ID to attach a possible actor effect to                                      |
