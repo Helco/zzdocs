@@ -17,8 +17,8 @@ SKA (Skeletal Animation) files are used to store model animations. This format w
 ## [[ED]]
 ED (Effect description) files are used to describe various effects. This format was developed by Funatics Entertainment for ZanZarah.
 
-## [[FBS]]
-FBS files are used to store various numeric and/or textual data about various aspects of the gameplay. They store information about the texts displayed in the game, fairy, spell, item and NPC information. They are the biggest source for [Scripts](/internal/Scripts). This format was developed by Funatics Entertainment for ZanZarah.
+## [FBS](./FBS/)
+FBS files are used to store various numeric and/or textual data about various aspects of the gameplay. They store information about the texts displayed in the game, fairy, spell, item and NPC information. They are the biggest source for [Scripts](../internal/Scripts.md). This format was developed by Funatics Entertainment for ZanZarah.
 
 ## [[AED]]
 AED (actorex description) files are used to combine the body mesh files with the wing mesh files and the animation files for both of them. The format was developed by Funatics Entertainment for ZanZarah.

@@ -1,11 +1,11 @@
 # DAT
-Savegames stored in DAT files consist of various sections. The main parts of it are the GameState and the Inventory. Also the [GlobalVars](/internal/GlobalVars) are saved here.
+Savegames stored in DAT files consist of various sections. The main parts of it are the GameState and the Inventory. Also the [GlobalVars](../internal/GlobalVars.md) are saved here.
 
 ## Data format
 
 | Size | Type |  Section  | Description |
 |------|------|-----------|-------------|
-|      |[ZZVersion](/internal/ZZVersion)| Header | This version has to be compatible with the internal savegame ZZVersion structure |
+|      |[ZZVersion](../internal/ZZVersion.md)| Header | This version has to be compatible with the internal savegame ZZVersion structure |
 |      |zstring| Header   | The players name |
 |  4B  | uint | Location  | The structure size of the location block (always 8) |
 |  4B  | uint | Location  | Scene ID    |
@@ -17,7 +17,7 @@ Savegames stored in DAT files consist of various sections. The main parts of it 
 |  4B  | uint | PixieCount | The current amount of pixies hold on by the player |
 |  4B  | uint | PixieCount | The total amount of pixies catched by the player |
 |  4B  | uint | GlobalVars | The count of global variables (always 49) |
-|      |[GlobalVar[]](/internal/GlobalVars#data-format)| GlobalVars | The global variables |
+|      |[GlobalVar[]](../internal/GlobalVars.md#data-format)| GlobalVars | The global variables |
 |  4B  | uint | SwitchGameMinTries | The minimal count of tries for the [[switch game|SwitchGame]] |
 
 ## GameStateScene
@@ -99,7 +99,7 @@ Savegames stored in DAT files consist of various sections. The main parts of it 
 
 | Size | Type | Description |
 |------|------|-------------|
-|  4B  |[CardId](/internal/CardId)| The CardId, thus also encodes the type |
+|  4B  |[CardId](../internal/CardId.md)| The CardId, thus also encodes the type |
 |  4B  | uint | *atIdx* - The index at which Zanzarah puts this card in the internal inventory list |
 |  4B  | uint | *dbUID* - The database ID (so either [fb0x01](./FBS/fb0x01.md), [fb0x03](./FBS/fb0x03.md) or [fb0x04](./FBS/fb0x04.md)) of the card |
 |  4B  | uint | *amount*    |
@@ -138,6 +138,6 @@ Items do not have any extra information
 
 | Size | Type | Description |
 |------|------|-------------|
-|  1B  | enum | *class1* - (see [Classes](/internal/Classes)) |
-|  1B  | enum | *class2* - (see [Classes](/internal/Classes)) |
-|  1B  | enum | *class3* - (see [Classes](/internal/Classes)) |
+|  1B  | enum | *class1* - (see [Classes](../internal/Classes.md)) |
+|  1B  | enum | *class2* - (see [Classes](../internal/Classes.md)) |
+|  1B  | enum | *class3* - (see [Classes](../internal/Classes.md)) |

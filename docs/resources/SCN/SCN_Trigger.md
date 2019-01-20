@@ -36,15 +36,15 @@ Note that internally, there are more collider types, but these are the ones used
 
 | Value |        Name        | Description |
 |:-----:|--------------------|-------------|
-|   0   | Doorway            | used as entrance/exit of a scene, [see detail page](/internal/Triggers#doorway) |
-|   1   | SingleplayerStartpoint | [see detail page](/internal/Triggers#singleplayerstartpoint) |
+|   0   | Doorway            | used as entrance/exit of a scene, [see detail page](../../internal/Triggers.md#doorway) |
+|   1   | SingleplayerStartpoint | [see detail page](../../internal/Triggers.md#singleplayerstartpoint) |
 |   2   | MultiplayerStartpoint  |  |
 |   3   | NpcStartpoint      |  |
-|   4   | CameraPosition     | used by [scripts](/internal/Scripts) to change the camera view, [see detail page](/internal/Triggers#cameraposition) |
-|   5   | Waypoint           | used for NPCs, [see detail page](/internal/Triggers#waypoints) |
+|   4   | CameraPosition     | used by [scripts](../../internal/Scripts.md) to change the camera view, [see detail page](../../internal/Triggers.md#cameraposition) |
+|   5   | Waypoint           | used for NPCs, [see detail page](../../internal/Triggers.md#waypoints) |
 |   6   | StartDuel          | unused |
 |   7   | LeaveDuel          | unused |
-|   8   | NpcAttackPosition  | used mostly for wild fairies, [see detail page](/internal/Triggers#npcattackposition) |
+|   8   | NpcAttackPosition  | used mostly for wild fairies, [see detail page](../../internal/Triggers.md#npcattackposition) |
 |   9   | FlyArea            | unused |
 |  10   | KillPlayer         |  |
 |  11   | SetCameraView      | unused |
@@ -61,12 +61,12 @@ Note that internally, there are more collider types, but these are the ones used
 |  22   | LeaveDancePlatform | unused |
 |  23   | RemoveStoneBlocker | unused |
 |  24   | RemovePlantBlocker | unused |
-|  25   | EventCamera        | this trigger is used by the exectuable to set the camera on certain events like removing stone/plant blockers, [CreatePlatforms](/internal/Triggers#createplatforms-createitems), etc. |
-|  26   | Platform           | [see detail page](/internal/Triggers#platform) |
-|  27   | CreatePlatforms    | [see detail page](/internal/Triggers#createplatforms-createitems) |
+|  25   | EventCamera        | this trigger is used by the exectuable to set the camera on certain events like removing stone/plant blockers, [CreatePlatforms](../../internal/Triggers.md#createplatforms-createitems), etc. |
+|  26   | Platform           | [see detail page](../../internal/Triggers.md#platform) |
+|  27   | CreatePlatforms    | [see detail page](../../internal/Triggers.md#createplatforms-createitems) |
 |  28   | ShadowLight        |  |
-|  29   | CreateItems        | [see detail page](/internal/Triggers#createplatforms-createitems) |
-|  30   | Item               | [see detail page](/internal/Triggers#item) |
+|  29   | CreateItems        | [see detail page](../../internal/Triggers.md#createplatforms-createitems) |
+|  30   | Item               | [see detail page](../../internal/Triggers.md#item) |
 |  31   | Shrink             | unused |
 |  32   | WizformMarker      | unused |
 |  -/-  | RemoveLock         | this name is in the executable, but it messes up with the rest of the types |
@@ -76,8 +76,8 @@ Note that internally, there are more collider types, but these are the ones used
 |  36   | OpenMagicWaypoints | unused |
 |  37   | _RuneTarget_       | not an original name, used to place Amy after teleporting with rune, *ii1* either 0 or 1000, meaning unknown |
 |  38   | Unused38           | no name present in the executable |
-|  39   | Animal             | [see detail page](/internal/Triggers#animal) |
-|  40   | AnimalWaypoint     | [see detail page](/internal/Triggers#waypoints) |
+|  39   | Animal             | [see detail page](../../internal/Triggers.md#animal) |
+|  40   | AnimalWaypoint     | [see detail page](../../internal/Triggers.md#waypoints) |
 |  41   | SceneOpening       | unused |
 |  42   | CollectionWizform  | used in London to place the unused fairies |
 |  43   | ElementalLock      |  |

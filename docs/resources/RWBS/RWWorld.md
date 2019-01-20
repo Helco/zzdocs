@@ -1,6 +1,6 @@
 # RWWorld (0x000B)
 
-The RWWorld section stores header information for the world geometry and is the root section of [[BSP files]]. The format was described by [kabbi](https://github.com/kabbi/zanzarah-tools/blob/master/bsp-parser.coffee#L101).
+The RWWorld section stores header information for the world geometry and is the root section of [BSP files](../BSP.md). The format was described by [kabbi](https://github.com/kabbi/zanzarah-tools/blob/master/bsp-parser.coffee#L101).
 
 ## Structure format
 

@@ -17,7 +17,7 @@ This does not include any form of geometry, which would be stored in [BSP](../BS
 
 |             Link             |      Name(s)      | Description |
 |:----------------------------:|:-----------------:|-------------|
-| [ [x] ](/internal/ZZVersion) | Version           | information about build version, date/time, author, release country...|
+| [ [x] ](../../internal/ZZVersion.md) | Version           | information about build version, date/time, author, release country...|
 | [ [x] ](SCN_Misc)            | Misc              | __mostly unknown__ information about the scene in general |
 | [ [x] ](SCN_WaypointSystem)  | WaypointSystem    | __mostly unknown__ information about the waypoints |
 | [ [x] ](SCN_Dataset)         | Dataset           | various gameplay information like scene id or name |

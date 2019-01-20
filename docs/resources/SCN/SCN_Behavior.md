@@ -21,21 +21,21 @@ The game groups certain Behavior types to one main functionality and then splits
 |  902  | MetalDoorLeft     | unused |
 |  903  | CityDoorDown      | unused |
 |  904  | CityDoorUp        | |
-|  910  | DoorGold          | [see details](/internal/Behaviors#locked-doors) |
-|  911  | DoorSilver        | [see details](/internal/Behaviors#locked-doors) |
-|  912  | DoorCopper        | [see details](/internal/Behaviors#locked-doors) |
-|  913  | DoorBronze        | [see details](/internal/Behaviors#locked-doors) |
-|  914  | DoorIron          | [see details](/internal/Behaviors#locked-doors) |
+|  910  | DoorGold          | [see details](../../internal/Behaviors.md#locked-doors) |
+|  911  | DoorSilver        | [see details](../../internal/Behaviors.md#locked-doors) |
+|  912  | DoorCopper        | [see details](../../internal/Behaviors.md#locked-doors) |
+|  913  | DoorBronze        | [see details](../../internal/Behaviors.md#locked-doors) |
+|  914  | DoorIron          | [see details](../../internal/Behaviors.md#locked-doors) |
 |  915  | DoorPlating       | unused |
-|  916  | DoorGlass         | [see details](/internal/Behaviors#locked-doors) |
+|  916  | DoorGlass         | [see details](../../internal/Behaviors.md#locked-doors) |
 |  917  | DoorWithLock      | unused |
-|  918  | CityDoorLock      | [see details](/internal/Behaviors#locked-doors) |
+|  918  | CityDoorLock      | [see details](../../internal/Behaviors.md#locked-doors) |
 |  919  | LockedMetalDoor   | |
 |  920  | LockedWoodenDoor  | unused |
-|  921  | DoorRed           | [see details](/internal/Behaviors#locked-doors) |
-|  922  | DoorYellow        | [see details](/internal/Behaviors#locked-doors) |
-|  923  | DoorBlue          | [see details](/internal/Behaviors#locked-doors) |
-| 1000  | Collectable       | [see details](/internal/Behaviors#collectable) |
+|  921  | DoorRed           | [see details](../../internal/Behaviors.md#locked-doors) |
+|  922  | DoorYellow        | [see details](../../internal/Behaviors.md#locked-doors) |
+|  923  | DoorBlue          | [see details](../../internal/Behaviors.md#locked-doors) |
+| 1000  | Collectable       | [see details](../../internal/Behaviors.md#collectable) |
 | 1001  | Collectable_EFF0  | |
 | 1002  | Collectable_EFF1  | unused |
 | 1010  | *GenCollectable*    | only generated at runtime, not an original name |
