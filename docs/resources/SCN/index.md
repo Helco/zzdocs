@@ -1,4 +1,4 @@
-## Scene
+# Basic information
 
 The scene format contains all gameplay-specific informations about a world the player might travel. This also includes all duel arenas where the player is controlling a fairy instead of Amy. <br/>
 This does not include any form of geometry, which would be stored in [[BSP|BSP]] and [[DFF|DFF]] files.
