@@ -1,4 +1,4 @@
-## Scene section "TextureProperties"
+# TextureProperties
 
 This section describes the kind of footstep applicable to this texture.
 
@@ -9,7 +9,7 @@ The section is an array of TextureProperty structures.
 | Size | Type  | Description |
 |------|-------|-------------|
 |      |zstring| texture filename |
-|  4B  | enum  | see [[FootstepType|#FootstepType]]|
+|  4B  | enum  | see [FootstepType](#footsteptype)|
 
 #### FootstepType
 
@@ -24,7 +24,7 @@ Every footstep has four different sound files to play (all in the directory AUDI
 |   4   | Grass                  | _f000 | _f001 | _f002 | _f003 |
 |   5   | Mud                    | _f020 | _f021 | _f022 | _f023 |
 |   6   | Marmor                 | _f024 | _f025 | _f026 | _f027 |
-|   7   | Outdoor roads/pathways | _f028 | _f029 | _f030 | _f031 | 
+|   7   | Outdoor roads/pathways | _f028 | _f029 | _f030 | _f031 |
 |   8   | Stone in the mountains | _f032 | _f033 | _f034 | _f035 |
 |   9   | Snow (edge to stone)   | _f036 | _f037 | _f038 | _f039 |
 |  10   | Metal (lightly damped) | _f040 | _f041 | _f042 | _f043 |

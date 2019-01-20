@@ -1,4 +1,4 @@
-# Behavior type details
+# Trigger behavior
 
 This page lists trigger types and describes them in a bit more detail.
 

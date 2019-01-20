@@ -1,4 +1,4 @@
-## Scene section "Models", "Models_v2", "Models_v3", "Models_v4"
+# Models (Models[_v?])
 
 These sections describe models which are essential to the gameplay or the design of the scene. <br/>
 There are different version of the section, but for now only Models_v3 is described, as the other versions are not used in the game files.

@@ -1,4 +1,4 @@
-## Scene section "Music"
+# Music
 
 This section which only holds a single _32Bit unsigned integer_ describes a hardcoded music to be played in the scene. <br/>
 Unfortunately most scenes are specifying 0 as their music, so the real mapping has to be found yet.

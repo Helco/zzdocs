@@ -1,8 +1,8 @@
-## Scene section "VertexModifiers"
+# VertexModifiers
 
 This section describes some kind of vertex modification, but it isn't used in the game files.
 
-### Format
+## Format
 
 The section is an array of VertexModifier structures.
 

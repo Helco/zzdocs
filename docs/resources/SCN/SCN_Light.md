@@ -1,4 +1,4 @@
-# Scene section "Lights"
+# Lights
 
 As the name states, this section defines the scene lights although its effect is yet to be shown.
 
@@ -8,7 +8,7 @@ The section is an array of light structures.
 
 | Size | Type  | Description                                      |
 |------|-------|--------------------------------------------------|
-|  4B  |  uint | index in light category (see [[SceneItemTypes]]) |
+|  4B  |  uint | index in light category (see [SceneItemTypes](./SCN_Scene.md)) |
 |  4B  |  enum | [Type of the light](#light-type)                 |
 |  4B  | float | Color component red                              |
 |  4B  | float | Color component green                            |

@@ -1,4 +1,4 @@
-## Scene section "Scene"
+# SceneItems (Scene)
 
 This section describes some mapping between items from this scene to names, but most names are empty. How this mapping works is unclear.<br/>
 This most likely is just debug information.

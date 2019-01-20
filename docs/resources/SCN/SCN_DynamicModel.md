@@ -1,4 +1,4 @@
-## Scene section "DynamicModels"
+# DynamicModels
 
 This section describes models which can change their appearence over time, but there is little information how and in which way this occurs.
 
@@ -18,9 +18,9 @@ The section content contains an structural array.
 | 12B  | Vec3f | __unknown__ some vector |
 |  4B  | uint  | __unknown__ some integer |
 |  4B  | uint  | __unknown__ some integer |
-|      |DynModelData[3]| __unknown__ change parameters (see [[DynModelData|#dynmodeldata]]) |
+|      |DynModelData[3]| __unknown__ change parameters (see [DynModelData](#dynmodeldata)) |
 
-#### DynModelData
+### DynModelData
 
 | Size | Type  | Description |
 |------|-------|-------------|

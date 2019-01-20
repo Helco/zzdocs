@@ -1,4 +1,4 @@
-## Scene section "Backdrop"
+# Backdrop
 
 This section is composed out of a single *zstring*, which sometimes is a backdrop model which is then used as a static background. <br/>
 If however this string has a underscore ```_```, there is a number to the left of said underscore which is used by the game to add a hardcoded dynamic background.

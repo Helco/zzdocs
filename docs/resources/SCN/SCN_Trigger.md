@@ -1,18 +1,18 @@
-## Scene section "Triggers"
+# Triggers
 
 This section describes areas in the scene and how the game shall use them.
 
-### Format
+## Format
 
 The section is an array of Trigger structures.
 
 | Size | Type  | Description |
 |------|-------|-------------|
 |  4B  | uint  | some kind of index |
-|  4B  | enum  | [[collider type|#collider-type]] |
+|  4B  | enum  | [collider type](#collider-type) |
 |  4B  | uint  | flag if direction should be normalized |
 | 12B  | Vec3f | direction |
-|  4B  | enum  | [[trigger type|#trigger-type]] |
+|  4B  | enum  | [trigger type](#trigger-type) |
 |  4B  | uint  | trigger type specific parameter |
 |  4B  | uint  | trigger type specific parameter |
 |  4B  | uint  | trigger type specific parameter |
@@ -22,7 +22,7 @@ The section is an array of Trigger structures.
 | 12B  | Vec3f | _collider type == Box_ size |
 |  4B  | float | _collider type == Sphere_ radius |
 
-#### Collider Type
+### Collider Type
 
 | Value | Description |
 |:-----:|-------------|
@@ -32,19 +32,19 @@ The section is an array of Trigger structures.
 
 Note that internally, there are more collider types, but these are the ones used in the game.
 
-#### Trigger Type
+### Trigger Type
 
 | Value |        Name        | Description |
 |:-----:|--------------------|-------------|
-|   0   | Doorway            | used as entrance/exit of a scene, [[see detail page|Triggers#Doorway]] |
-|   1   | SingleplayerStartpoint | [[see detail page|Triggers#SingleplayerStartpoint]] |
+|   0   | Doorway            | used as entrance/exit of a scene, [see detail page](/internal/Triggers#doorway) |
+|   1   | SingleplayerStartpoint | [see detail page](/internal/Triggers#singleplayerstartpoint) |
 |   2   | MultiplayerStartpoint  |  |
 |   3   | NpcStartpoint      |  |
-|   4   | CameraPosition     | used by [[scripts|Scripts]] to change the camera view, [[see detail page|Triggers#CameraPosition]] |
-|   5   | Waypoint           | used for NPCs, [[see detail page|Triggers#Waypoints]] |
+|   4   | CameraPosition     | used by [scripts](/internal/Scripts) to change the camera view, [see detail page](/internal/Triggers#cameraposition) |
+|   5   | Waypoint           | used for NPCs, [see detail page](/internal/Triggers#waypoints) |
 |   6   | StartDuel          | unused |
 |   7   | LeaveDuel          | unused |
-|   8   | NpcAttackPosition  | used mostly for wild fairies, [[see detail page|Triggers#NpcAttackPosition]] |
+|   8   | NpcAttackPosition  | used mostly for wild fairies, [see detail page](/internal/Triggers#npcattackposition) |
 |   9   | FlyArea            | unused |
 |  10   | KillPlayer         |  |
 |  11   | SetCameraView      | unused |
@@ -61,12 +61,12 @@ Note that internally, there are more collider types, but these are the ones used
 |  22   | LeaveDancePlatform | unused |
 |  23   | RemoveStoneBlocker | unused |
 |  24   | RemovePlantBlocker | unused |
-|  25   | EventCamera        | this trigger is used by the exectuable to set the camera on certain events like removing stone/plant blockers, [[CreatePlatforms|Triggers#CreatePlatforms]], etc. |
-|  26   | Platform           | [[see detail page|Triggers#Platform]] |
-|  27   | CreatePlatforms    | [[see detail page|Triggers#CreatePlatforms-CreateItems]] |
+|  25   | EventCamera        | this trigger is used by the exectuable to set the camera on certain events like removing stone/plant blockers, [CreatePlatforms](/internal/Triggers#createplatforms-createitems), etc. |
+|  26   | Platform           | [see detail page](/internal/Triggers#platform) |
+|  27   | CreatePlatforms    | [see detail page](/internal/Triggers#createplatforms-createitems) |
 |  28   | ShadowLight        |  |
-|  29   | CreateItems        | [[see detail page|Triggers#CreatePlatforms-CreateItems]] |
-|  30   | Item               | [[see detail page|Triggers#Item]] |
+|  29   | CreateItems        | [see detail page](/internal/Triggers#createplatforms-createitems) |
+|  30   | Item               | [see detail page](/internal/Triggers#item) |
 |  31   | Shrink             | unused |
 |  32   | WizformMarker      | unused |
 |  -/-  | RemoveLock         | this name is in the executable, but it messes up with the rest of the types |
@@ -76,8 +76,8 @@ Note that internally, there are more collider types, but these are the ones used
 |  36   | OpenMagicWaypoints | unused |
 |  37   | _RuneTarget_       | not an original name, used to place Amy after teleporting with rune, *ii1* either 0 or 1000, meaning unknown |
 |  38   | Unused38           | no name present in the executable |
-|  39   | Animal             | [[see detail page|Triggers#Animal]] |
-|  40   | AnimalWaypoint     | [[see detail page|Triggers#Waypoints]] |
+|  39   | Animal             | [see detail page](/internal/Triggers#animal) |
+|  40   | AnimalWaypoint     | [see detail page](/internal/Triggers#waypoints) |
 |  41   | SceneOpening       | unused |
 |  42   | CollectionWizform  | used in London to place the unused fairies |
 |  43   | ElementalLock      |  |

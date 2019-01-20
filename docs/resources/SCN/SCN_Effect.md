@@ -1,31 +1,31 @@
-## Scene sections "Effects", "Effects_v2"
+# Effects (Effects[_v2])
 
-These sections describe simple effects or how complex effects ([[per file|ED]]) should be included.
+These sections describe simple effects or how complex effects (per file) should be included.
 
-### Format
+## Format
 
 Each section is an array of their respective structure.
 
-#### Effect
+### Effect
 | Size | Type  | Description |
 |------|-------|-------------|
 |  4B  | uint  | some kind of index |
-|  4B  | enum  | [[effect type|#effect-type]] |
-|      |EffectData| [[effect type specific data|#effect-data]] |
+|  4B  | enum  | [effect type](#effect-type) |
+|      |EffectData| [effect type specific data](#effect-data) |
 
-#### Effect_v2 
+### Effect_v2
 | Size | Type  | Description |
 |------|-------|-------------|
 |  4B  | uint  | some kind of index |
-|  4B  | enum  | [[effect type|#effect-type]] |
+|  4B  | enum  | [effect type](#effect-type) |
 |  4B  | uint  | __unknown__ some integer parameter |
 |  4B  | uint  | __unknown__ some integer parameter |
 |  4B  | uint  | __unknown__ some integer parameter |
 |  4B  | uint  | __unknown__ some integer parameter |
 |  4B  | uint  | __unknown__ some integer parameter |
-|      |EffectData| [[effect type specific data|#effect-data]] |
+|      |EffectData| [effect type specific data](#effect-data) |
 
-#### Effect type
+### Effect type
 | Value | Description |
 |:-----:|-------------|
 |   1   | |
@@ -37,7 +37,7 @@ Each section is an array of their respective structure.
 |  11   | Snowflakes |
 |  13   | |
 
-#### Effect data
+### Effect data
 
 _if type == 1 or 5 or 6 or 10_
 

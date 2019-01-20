@@ -1,9 +1,9 @@
-# Scene section "Misc"
+# Misc
 
 This section stores some core data about the scene and how it is supposed to be rendered.
 Internally this section is split into three parts.
 
-# Format
+## Format
 
 | Size | Type  | Description |
 |------|-------|-------------|
@@ -18,4 +18,4 @@ Internally this section is split into three parts.
 |  4B  | uint  | _if fog!=None_ fog color |
 |  4B  | float | _if fog!=None_ fog distance |
 |  4B  | float | __unknown__ |
-|  4B  | float | far clip (near clip is constant at 0.1) | 
+|  4B  | float | far clip (near clip is constant at 0.1) |
