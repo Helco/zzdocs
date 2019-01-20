@@ -1,6 +1,6 @@
-## General information
+# Basic information
 ----------------------
-FBS files are used to store various numeric and/or textual data about various aspects of the gameplay. They store information about the texts displayed in the game, fairy, spell, item and NPC information. They are the biggest source for [[Scripts|Script]]. This format was developed by Funatics Entertainment for ZanZarah.
+FBS files are used to store various numeric and/or textual data about various aspects of the gameplay. They store information about the texts displayed in the game, fairy, spell, item and NPC information. They are the biggest source for [scripts](../../internal/Scripts). This format was developed by Funatics Entertainment for ZanZarah.
 
 ## Data format
 There are actually two types of FBS files: the one whose only file is called "_fb0x00.fbs" and all the other files. The first one is the database index file, it stores all column names and some number which doesn't seem to be used and is the same for all columns.
@@ -65,9 +65,9 @@ Unfortunately the column index stored in the row data is not always correct, but
 | Filename | Description |
 |:--------:|-------------|
 | fb0x00   | The index file |
-| [[fb0x01|fb0x01]] | Fairies |
-| [[fb0x02|fb0x02]] | Strings |
-| [[fb0x03|fb0x03]] | Spells  |
-| [[fb0x04|fb0x04]] | Items   |
-| [[fb0x05|fb0x05]] | NPCs    |
-| [[fb0x06|fb0x06]] | Dialog lines |
+| [[fb0x01]] | Fairies |
+| [[fb0x02]] | Strings |
+| [[fb0x03]] | Spells  |
+| [[fb0x04]] | Items   |
+| [[fb0x05]] | NPCs    |
+| [[fb0x06]] | Dialog lines |
