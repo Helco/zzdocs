@@ -1,84 +1,84 @@
-## Savegame reference
-Savegames consist of various sections. The main parts of it are the GameState and the Inventory. Also the [[GlobalVars|GlobalVars]] are saved here.
+# DAT
+Savegames stored in DAT files consist of various sections. The main parts of it are the GameState and the Inventory. Also the [GlobalVars](/internal/GlobalVars) are saved here.
 
-### Data format
+## Data format
 
 | Size | Type |  Section  | Description |
 |------|------|-----------|-------------|
-|      |[[ZZVersion|ZZVersion#Format]]| Header | This version has to be compatible with the internal savegame ZZVersion structure |
+|      |[ZZVersion](/internal/ZZVersion)| Header | This version has to be compatible with the internal savegame ZZVersion structure |
 |      |zstring| Header   | The players name |
 |  4B  | uint | Location  | The structure size of the location block (always 8) |
 |  4B  | uint | Location  | Scene ID    |
 |  4B  | uint | Location  | Entrance Trigger ID |
 |  4B  | uint | GameState | Count of scenes for which are GameState Modifier saved |
-|      |[GameStateScene[]](#GameStateScene)| GameState | The scene data |
+|      |[GameStateScene[]](#gamestatescene)| GameState | The scene data |
 |  4B  | uint | Inventory | The count of cards in the players inventory |
-|      |[InventoryCard[]](#InventoryCard)| Inventory | The inventory card data |
+|      |[InventoryCard[]](#inventorycard)| Inventory | The inventory card data |
 |  4B  | uint | PixieCount | The current amount of pixies hold on by the player |
 |  4B  | uint | PixieCount | The total amount of pixies catched by the player |
 |  4B  | uint | GlobalVars | The count of global variables (always 49) |
-|      |[GlobalVar[]](GlobalVars#Data-format)| GlobalVars | The global variables |
+|      |[GlobalVar[]](/internal/GlobalVars#data-format)| GlobalVars | The global variables |
 |  4B  | uint | SwitchGameMinTries | The minimal count of tries for the [[switch game|SwitchGame]] |
 
-### GameStateScene
+## GameStateScene
 
 | Size | Type | Description |
 |------|------|-------------|
 |      |zstring| The scene name |
 |  4B  | uint | The GameState modifier count for this scene |
-|      |[[GameStateMod|#GameStateMod]][]| The GameState modifiers |
+|      |[GameStateMod](#gamestatemod)[]| The GameState modifiers |
 
-### GameStateMod
+## GameStateMod
 
 | Size | Type | Description |
 |------|------|-------------|
-|  4B  | enum | The type of the GameStateMod (see [[GameStateModType|#GameStateModType]]) |
-|      |      | [[GameStateModType|#GameStateModType]] specific data |
+|  4B  | enum | The type of the GameStateMod (see [GameStateModType](#gamestatemodtype)) |
+|      |      | [GameStateModType](#gamestatemodtype) specific data |
 
-### GameStateModType
+## GameStateModType
 
 | Value | Description |
-|:-----:|-------------| 
-|   0   | [[DisableAttackTrigger|#GSModDisableAttackTrigger]] |
-|   1   | [[RemoveItem|#GSModRemoveItem]] |
-|   2   | [[ChangeNpcState|#GSModChangeNpcState]] |
-|   3   | [[DisableTrigger|#GSModDisableTrigger]] |
-|   4   | [[RemoveSimpleModel|#GSModRemoveSimpleModel]] |
-|   5   | [[SetTrigger|#GSModSetTrigger]] |
-|   6   | [[SetNpcModifier|#GSModSetNpcModifier]] |
+|:-----:|-------------|
+|   0   | [DisableAttackTrigger](#gsmoddisableattacktrigger) |
+|   1   | [RemoveItem](#gsmodremoveitem) |
+|   2   | [ChangeNpcState](#gsmodchangenpcstate) |
+|   3   | [DisableTrigger](#gsmoddisabletrigger) |
+|   4   | [RemoveSimpleModel](#gsmodremovesimplemodel) |
+|   5   | [SetTrigger](#gsmodsettrigger) |
+|   6   | [SetNpcModifier](#gsmodsetnpcmodifier) |
 
-### GSModDisableAttackTrigger
+## GSModDisableAttackTrigger
 
 | Size | Type | Description |
 |------|------|-------------|
 |  4B  | uint | *triggerId*   |
 
-### GSModRemoveItem
+## GSModRemoveItem
 
 | Size | Type | Description |
 |------|------|-------------|
 |  4B  | uint | *modelId*     |
 
-### GSModChangeNpcState
+## GSModChangeNpcState
 
 | Size | Type | Description |
 |------|------|-------------|
 |  4B  | uint | *triggerId* |
-|  4B  | uint | *databaseId* - The [[fb0x05|fb0x05]] UID of the NPC to change into |
+|  4B  | uint | *databaseId* - The [fb0x05](./FBS/fb0x05.md) UID of the NPC to change into |
 
-### GSModDisableTrigger
+## GSModDisableTrigger
 
 | Size | Type | Description |
 |------|------|-------------|
 |  4B  | uint | *triggerId* |
 
-### GSModRemoveSimpleModel
+## GSModRemoveSimpleModel
 
 | Size | Type | Description |
 |------|------|-------------|
 |  4B  | uint | *modelId*   |
 
-### GSModSetTrigger
+## GSModSetTrigger
 
 | Size | Type |  Description  |
 |------|------|---------------|
@@ -88,35 +88,35 @@ Savegames consist of various sections. The main parts of it are the GameState an
 |  4B  | uint | *ii3* - this said parameter is not set |
 |  4B  | uint | *ii4*         |
 
-### GSModSetNpcModifier
+## GSModSetNpcModifier
 
 | Size | Type | Description |
 |------|------|-------------|
 |  4B  | uint | *triggerId*   |
 |  4B  | uint | *value* - Actually just sets the triggers ii2 param |
 
-### InventoryCard
+## InventoryCard
 
 | Size | Type | Description |
 |------|------|-------------|
-|  4B  |[[CardId|CardId]]| The CardId, thus also encodes the type |
+|  4B  |[CardId](/internal/CardId)| The CardId, thus also encodes the type |
 |  4B  | uint | *atIdx* - The index at which Zanzarah puts this card in the internal inventory list |
-|  4B  | uint | *dbUID* - The database ID (so either [[fb0x01|fb0x01]], [[fb0x03|fb0x03]] or [[fb0x04|fb0x04]]) of the card |
+|  4B  | uint | *dbUID* - The database ID (so either [fb0x01](./FBS/fb0x01.md), [fb0x03](./FBS/fb0x03.md) or [fb0x04](./FBS/fb0x04.md)) of the card |
 |  4B  | uint | *amount*    |
 |  1B  | bool | *isUsed*    |
-|      |      | [[InventoryCard|InventoryCard]]-specific data |
+|      |      | InventoryCard-specific data |
 
-### InventoryItem
+## InventoryItem
 Items do not have any extra information
 
-### InventorySlot
+## InventorySlot
 
 | Size | Type | Description |
 |------|------|-------------|
 |  4B  | uint | *usageCount* - How many times this spell was used |
 |  4B  | uint | *curMana*   |
 
-### InventoryFairy
+## InventoryFairy
 
 | Size | Type | Description |
 |------|------|-------------|
@@ -126,7 +126,7 @@ Items do not have any extra information
 |  4B  | uint | **unknown** |
 |  4B  | uint | *changeCountXP* - How many times this fairy got XP |
 |  4B  | uint | *curXP*     |
-| 12B  |[[SpellReq|SpellReq]][4]| The current spell requirements |
+| 12B  |[SpellReq](#spellreq)[4]| The current spell requirements |
 | 16B  |uint[4]| The spell indices (in the inventory of the player) |
 |  4B  | uint | The slot index in the players deck |
 |  4B  | uint | *statusEffect* |
@@ -134,10 +134,10 @@ Items do not have any extra information
 |  4B  | uint | Current health points |
 |      |zstring| *name*     |
 
-### SpellReq
+## SpellReq
 
 | Size | Type | Description |
 |------|------|-------------|
-|  1B  | enum | *class1* - (see [[Classes|Classes]]) |
-|  1B  | enum | *class2* - (see [[Classes|Classes]]) |
-|  1B  | enum | *class3* - (see [[Classes|Classes]]) |
+|  1B  | enum | *class1* - (see [Classes](/internal/Classes)) |
+|  1B  | enum | *class2* - (see [Classes](/internal/Classes)) |
+|  1B  | enum | *class3* - (see [Classes](/internal/Classes)) |
