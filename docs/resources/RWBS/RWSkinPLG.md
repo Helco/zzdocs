@@ -19,7 +19,7 @@ Here is a discrepancy between the format described by [gtamodding](http://www.gt
 |------|------|-------------|
 |  4b  | uint | _i1_
 |  4b  | uint | _idx_
-|  4b  | uint | _i3_
+|  4b  | BoneFlags | bone flags |
 | 12b  |Vector| _right_
 |  4b  | uint | ___unused___
 | 12b  |Vector| _up_
@@ -28,3 +28,11 @@ Here is a discrepancy between the format described by [gtamodding](http://www.gt
 |  4b  | uint | ___unused___
 | 12b  |Vector| _pos_
 |  4b  | uint | ___unused___
+
+### Bone flags
+
+| Flag-Bit | Description  |
+|:--------:|:-------------|
+|     0    | Is childless |
+|     1    | Has another sibling |
+|     3    | __unknown__  |

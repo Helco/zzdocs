@@ -1,18 +1,18 @@
-## BSP - Binary Space Partition
-Binary Space Partition files are used to store information about scene geometry, their materials and the respective collision data. Therefore the file inherits a recursive structure which is encoded using the [[RWBS|RWBS]] format.
+# BSP
+Binary Space Partition files are used to store information about scene geometry, their materials and the respective collision data. Therefore the file inherits a recursive structure which is encoded using the [RWBS](./RWBS/index.md) format.
 
-### Data format
-Please see the [[RWBS|RWBS]] article.
+## Data format
+Please see the [RWBS](./RWBS/index.md) articles.
 
-### Common RWBS structure
+## Common RWBS structure
 
-* 1 [[World|RWWorld]]
-    * 1 [[MaterialList|RWMaterialList]]
-        * 1-N [[Material|RWMaterial]]
-            * 1 [[Texture|RWTexture]]
-    * 1 [[PlaneSection|RWPlaneSection]] __or__ [[AtomicSection|RWAtomicSection]]
-        * 2 [[PlaneSection|RWPlaneSection]] __or__ [[AtomicSection|RWAtomicSection]]
-        * _for_ [[AtomicSection|RWAtomicSection]]
-            * 1 [[Extension|RWExtension]]
-                * 1 [[BinMeshPLG|RWBinMeshPLG]]
-                * 1 [[CollisionPLG|RWCollisionPLG]]
+* 1 [World](./RWBS/RWWorld.md)
+    * 1 [MaterialList](./RWBS/RWMaterialList.md)
+        * 1-N [Material](./RWBS/RWMaterial.md)
+            * 1 [Texture](./RWBS/RWTexture.md)
+    * 1 [PlaneSection](./RWBS/RWPlaneSection.md) __or__ [AtomicSection](./RWBS/RWAtomicSection.md)
+        * 2 [PlaneSection](./RWBS/RWPlaneSection.md) __or__ [AtomicSection](./RWBS/RWAtomicSection.md)
+        * _for_ [AtomicSection](./RWBS/RWAtomicSection.md)
+            * 1 [Extension](./RWBS/RWExtension.md)
+                * 1 [BinMeshPLG](./RWBS/RWBinMeshPLG.md)
+                * 1 [CollisionPLG](./RWBS/RWCollisionPLG.md)
