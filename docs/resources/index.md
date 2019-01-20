@@ -34,9 +34,9 @@ Unfortunately there exists three different CFG formats which all are incompatibl
 
 | Link | Files | Description |
 |:----:|-------|-------------|
-| [ [x] ](CFG_Game) | Configs/game.cfg | This file stores the game settings including input bindings |
-| [ [x] ](CFG_Map)  | System/map.cfg   | This file stores various map markers |
-| [ [x] ](CFG_Vars) | System/ai.cfg <br/> System/net.cfg <br/> System/wizform.cfg | These files store numeric variables, propably used to test and tweak the game during development |
+| [ [x] ](./CFG/CFG_Game) | Configs/game.cfg | This file stores the game settings including input bindings |
+| [ [x] ](./CFG/CFG_Map)  | System/map.cfg   | This file stores various map markers |
+| [ [x] ](./CFGCFG_Vars) | System/ai.cfg <br/> System/net.cfg <br/> System/wizform.cfg | These files store numeric variables, propably used to test and tweak the game during development |
 
 ## [RAW](./CFG_Map#ingame-display)
 There exists only one file with the extension RAW, it stores which pixel of the map texture correspond to the different world sections.

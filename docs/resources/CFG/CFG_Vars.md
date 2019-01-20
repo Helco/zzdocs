@@ -1,17 +1,17 @@
-## CFG for ai.cfg / wizform.cfg / net.cfg
+# Tweak variables (ai.cfg / wizform.cfg / net.cfg)
 
 These config files store variables which are either a floating point number or a string. The binary format is a bit unnecessary complicated and the actual use of the variables is yet to be known.
 
-### Format
+## Format
 
 | Size | Type | Description          |
 |------|------|----------------------|
 | 16B  | MD5  | A MD5 hash of the current file starting at the first named variable |
 |  3B  | uint | __unknown__ header |
-|      |CfgValue| __unknown__ first value (see [[CfgValue|#CfgValue]]) |
-|      |CfgVariable[]| array of variables to the end of the file (see [[CfgVariable|#CfgVariable]]) |
+|      |CfgValue| __unknown__ first value (see [CfgValue](#cfgvalue)) |
+|      |CfgVariable[]| array of variables to the end of the file (see [CfgVariable](#cfgvariable)) |
 
-#### CfgVariable
+### CfgVariable
 
 | Size | Type | Description          |
 |------|------|----------------------|
@@ -20,7 +20,7 @@ These config files store variables which are either a floating point number or a
 |  1B  | char | zero byte (as end character for the name) |
 |      |CfgValue| value of the variable
 
-#### CfgValue
+### CfgValue
 
 | Size | Type | Description          |
 |------|------|----------------------|
