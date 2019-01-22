@@ -1,7 +1,9 @@
 # setCamera
 
-```setCamera``` takes only a single numeric parameter, which determines where the camera should be located.
+`setCamera` takes only a single numeric parameter, which determines where the camera should be located.
 As this command is only allowed for [[scriptsystem implementation|Scripts#Implementations]] 1 and 3, therefore there is always a Npc to reference.
+
+Its single-character version is `&`
 
 | Value | Description |
 |:-----:|-------------|

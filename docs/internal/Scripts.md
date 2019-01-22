@@ -111,7 +111,7 @@ exit
 
 | Char | Max args |          Name         | Description |
 |:----:|:--------:|-----------------------|-------------|
-|  !   |     2    | say                   |
+|  !   |     2    | say                   | [see reference](./script commands/say.md)
 |  C   |     1    | setModel              |
 |  "   |     2    | choice                |
 |  #   |     0    | waitForUser           |
@@ -125,7 +125,7 @@ exit
 |  *   |     2    | fight                 |
 |  +   |     2    | lookAtPlayer          |
 |  ,   |     1    | changeDatabase        |
-|  -   |     0    | removeNpc             |
+|  -   |     0    | removeNpc             | [see reference](./script commands/removeNpc.md)
 |  .   |     0    | catchWizform          |
 |  0   |     0    | killPlayer            |
 |  5   |     1    | tradingCurrency       |
