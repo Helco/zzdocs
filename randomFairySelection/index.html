@@ -15,7 +15,7 @@
     
     
       
-        <title>Status - Zanzarah Knowledge Base</title>
+        <title>Random Fairy Selection - Zanzarah Knowledge Base</title>
       
     
     
@@ -49,7 +49,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#status" class="md-skip">
+        <a href="#random-fairy-selection" class="md-skip">
           Skip to content
         </a>
       
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Status
+              Random Fairy Selection
             
           </span>
         </div>
@@ -161,6 +161,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../Status/" title="Status" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -172,14 +184,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Status
+        Random Fairy Selection
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Status" class="md-nav__link md-nav__link--active">
-      Status
+    <a href="./" title="Random Fairy Selection" class="md-nav__link md-nav__link--active">
+      Random Fairy Selection
     </a>
     
       
@@ -198,23 +210,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#technical-stuff" class="md-nav__link">
-    Technical stuff
-  </a>
-  
-    <nav class="md-nav" aria-label="Technical stuff">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#renderware-files" class="md-nav__link">
-    Renderware files
+  <a href="#fairy-groups" class="md-nav__link">
+    Fairy groups
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#spells" class="md-nav__link">
+    Spells
+  </a>
+  
+    <nav class="md-nav" aria-label="Spells">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#zanzarah-specific-files" class="md-nav__link">
-    ZanZarah specific files
+  <a href="#level-rank" class="md-nav__link">
+    Level Rank
   </a>
   
 </li>
@@ -225,8 +237,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-documentation-to-be-done" class="md-nav__link">
-    Other documentation to be done
+  <a href="#levelrangeid" class="md-nav__link">
+    LevelRangeId
   </a>
   
 </li>
@@ -235,18 +247,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../randomFairySelection/" title="Random Fairy Selection" class="md-nav__link">
-      Random Fairy Selection
-    </a>
   </li>
 
     
@@ -1290,23 +1290,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#technical-stuff" class="md-nav__link">
-    Technical stuff
-  </a>
-  
-    <nav class="md-nav" aria-label="Technical stuff">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#renderware-files" class="md-nav__link">
-    Renderware files
+  <a href="#fairy-groups" class="md-nav__link">
+    Fairy groups
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#spells" class="md-nav__link">
+    Spells
+  </a>
+  
+    <nav class="md-nav" aria-label="Spells">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#zanzarah-specific-files" class="md-nav__link">
-    ZanZarah specific files
+  <a href="#level-rank" class="md-nav__link">
+    Level Rank
   </a>
   
 </li>
@@ -1317,8 +1317,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-documentation-to-be-done" class="md-nav__link">
-    Other documentation to be done
+  <a href="#levelrangeid" class="md-nav__link">
+    LevelRangeId
   </a>
   
 </li>
@@ -1339,174 +1339,1072 @@
                   
                 
                 
-                <h1 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h1>
-<h2 id="technical-stuff">Technical stuff<a class="headerlink" href="#technical-stuff" title="Permanent link">&para;</a></h2>
-<h3 id="renderware-files"><a href="../resources/RWBS/">Renderware files</a><a class="headerlink" href="#renderware-files" title="Permanent link">&para;</a></h3>
+                <h1 id="random-fairy-selection">Random Fairy Selection<a class="headerlink" href="#random-fairy-selection" title="Permanent link">&para;</a></h1>
+<p>There are two situations in the game where random fairies is chosen: for wild fairy encounters and for certain NPC's. Of course there is a strict set of rules as to still ensure a balanced games.</p>
+<h2 id="fairy-groups">Fairy groups<a class="headerlink" href="#fairy-groups" title="Permanent link">&para;</a></h2>
+<p>There are 33 sets of fairies which are identified by their index number. This id is used for the script command <code>W</code> (<code>defaultWizform</code>) and can also be found as second parameter of the <code>NpcAttackPosition</code> triggers. The group also defines the level range (with the <em>LevelRangeId</em>) the fairies can spawn at.</p>
+<p>These are the groups (if a fairy is listed twice, it is twice as likely to spawn):</p>
 <table>
 <thead>
 <tr>
-<th>File extension</th>
-<th align="center">Reading</th>
-<th align="center">Writing</th>
-<th align="center">Render</th>
-<th align="center">Wiki</th>
-<th>Exports</th>
-<th>Imports</th>
+<th align="center">GroupId</th>
+<th></th>
+<th align="center">FairyId</th>
+<th align="center">FairyName</th>
+<th></th>
+<th align="center">LRId</th>
+<th align="center">LevelRange</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../resources/DFF/">DFF (Models)</a></td>
-<td align="center">Yes</td>
-<td align="center">No</td>
-<td align="center">Yes</td>
-<td align="center">Yes</td>
-<td>JSON</td>
-<td>None</td>
+<td align="center">0</td>
+<td></td>
+<td align="center">9</td>
+<td align="center">Worgot</td>
+<td></td>
+<td align="center">5</td>
+<td align="center">3-3</td>
 </tr>
 <tr>
-<td><a href="../resources/BSP/">BSP (Worlds)</a></td>
-<td align="center">Yes</td>
-<td align="center">No</td>
-<td align="center">Yes</td>
-<td align="center">Yes</td>
-<td>JSON</td>
-<td>None</td>
+<td align="center"></td>
+<td></td>
+<td align="center">26</td>
+<td align="center">Blumella</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
-<td><a href="../resources/SKA/">SKA (Animations)</a></td>
-<td align="center">Yes</td>
-<td align="center">No</td>
-<td align="center">Yes</td>
-<td align="center">Yes</td>
-<td>JSON</td>
-<td>None</td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td></td>
+<td align="center">10</td>
+<td align="center">Corgot</td>
+<td></td>
+<td align="center">13</td>
+<td align="center">9-11</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">75</td>
+<td align="center">Lana</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td></td>
+<td align="center">57</td>
+<td align="center">Tinefol</td>
+<td></td>
+<td align="center">36</td>
+<td align="center">26-34</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">1</td>
+<td align="center">Viteria</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">0</td>
+<td align="center">Silia</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td></td>
+<td align="center">50</td>
+<td align="center">Pfoe</td>
+<td></td>
+<td align="center">24</td>
+<td align="center">17-22</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">57</td>
+<td align="center">Tinefol</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td></td>
+<td align="center">18</td>
+<td align="center">Abery</td>
+<td></td>
+<td align="center">13</td>
+<td align="center">9-11</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">10</td>
+<td align="center">Corgot</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td></td>
+<td align="center">9</td>
+<td align="center">Worgot</td>
+<td></td>
+<td align="center">24</td>
+<td align="center">17-22</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">19</td>
+<td align="center">Abnobery</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td></td>
+<td align="center">18</td>
+<td align="center">Abery</td>
+<td></td>
+<td align="center">24</td>
+<td align="center">17-22</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">0</td>
+<td align="center">Silia</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td></td>
+<td align="center">23</td>
+<td align="center">Cera</td>
+<td></td>
+<td align="center">13</td>
+<td align="center">9-11</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td></td>
+<td align="center">64</td>
+<td align="center">Goop</td>
+<td></td>
+<td align="center">24</td>
+<td align="center">17-22</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">23</td>
+<td align="center">Cera</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td></td>
+<td align="center">64</td>
+<td align="center">Goop</td>
+<td></td>
+<td align="center">36</td>
+<td align="center">26-34</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">6</td>
+<td align="center">Tadana</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td></td>
+<td align="center">6</td>
+<td align="center">Tadana</td>
+<td></td>
+<td align="center">42</td>
+<td align="center">31-40</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">6</td>
+<td align="center">Tadana</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">24</td>
+<td align="center">Amnis</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">25</td>
+<td align="center">Ceramnis</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td></td>
+<td align="center">20</td>
+<td align="center">Vesbat</td>
+<td></td>
+<td align="center">5</td>
+<td align="center">3-3</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">20</td>
+<td align="center">Vesbat</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td></td>
+<td align="center">62</td>
+<td align="center">Jumjum</td>
+<td></td>
+<td align="center">13</td>
+<td align="center">9-11</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">20</td>
+<td align="center">Vesbat</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td></td>
+<td align="center">4</td>
+<td align="center">Gremor</td>
+<td></td>
+<td align="center">24</td>
+<td align="center">17-22</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">21</td>
+<td align="center">Stobat</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td></td>
+<td align="center">3</td>
+<td align="center">Boneria</td>
+<td></td>
+<td align="center">42</td>
+<td align="center">31-40</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">62</td>
+<td align="center">Jumjum</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td></td>
+<td align="center">27</td>
+<td align="center">Mencre</td>
+<td></td>
+<td align="center">13</td>
+<td align="center">9-11</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">28</td>
+<td align="center">Mensec</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td></td>
+<td align="center">27</td>
+<td align="center">Mencre</td>
+<td></td>
+<td align="center">24</td>
+<td align="center">17-22</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">47</td>
+<td align="center">Mentaur</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td></td>
+<td align="center">27</td>
+<td align="center">Mencre</td>
+<td></td>
+<td align="center">36</td>
+<td align="center">26-34</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">47</td>
+<td align="center">Mentaur</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td></td>
+<td align="center">46</td>
+<td align="center">Beltaur</td>
+<td></td>
+<td align="center">42</td>
+<td align="center">31-40</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">46</td>
+<td align="center">Beltaur</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">27</td>
+<td align="center">Mencre</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td></td>
+<td align="center">12</td>
+<td align="center">Airia</td>
+<td></td>
+<td align="center">36</td>
+<td align="center">26-34</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">13</td>
+<td align="center">Luria</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td></td>
+<td align="center">41</td>
+<td align="center">Gorael</td>
+<td></td>
+<td align="center">36</td>
+<td align="center">26-34</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">40</td>
+<td align="center">Sirael</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td></td>
+<td align="center">54</td>
+<td align="center">Sirella</td>
+<td></td>
+<td align="center">42</td>
+<td align="center">31-40</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">40</td>
+<td align="center">Sirael</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td></td>
+<td align="center">55</td>
+<td align="center">Dracwin</td>
+<td></td>
+<td align="center">42</td>
+<td align="center">31-40</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">55</td>
+<td align="center">Dracwin</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td></td>
+<td align="center">31</td>
+<td align="center">Pix</td>
+<td></td>
+<td align="center">54</td>
+<td align="center">40-52</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">31</td>
+<td align="center">Pix</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">32</td>
+<td align="center">Ferix</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td></td>
+<td align="center">34</td>
+<td align="center">Feez</td>
+<td></td>
+<td align="center">36</td>
+<td align="center">26-34</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">35</td>
+<td align="center">Greez</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td></td>
+<td align="center">36</td>
+<td align="center">Greezloc</td>
+<td></td>
+<td align="center">42</td>
+<td align="center">31-40</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">52</td>
+<td align="center">Glacess</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">26</td>
+<td></td>
+<td align="center">15</td>
+<td align="center">Rasrow</td>
+<td></td>
+<td align="center">24</td>
+<td align="center">17-22</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">37</td>
+<td align="center">Skelbo</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">27</td>
+<td></td>
+<td align="center">15</td>
+<td align="center">Rasrow</td>
+<td></td>
+<td align="center">36</td>
+<td align="center">26-34</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">37</td>
+<td align="center">Skelbo</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">28</td>
+<td></td>
+<td align="center">15</td>
+<td align="center">Rasrow</td>
+<td></td>
+<td align="center">42</td>
+<td align="center">31-40</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">53</td>
+<td align="center">Akrita</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">69</td>
+<td align="center">Manox</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td></td>
+<td align="center">69</td>
+<td align="center">Manox</td>
+<td></td>
+<td align="center">54</td>
+<td align="center">40-52</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">70</td>
+<td align="center">Turnox</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">29</td>
+<td align="center">Violectra</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td></td>
+<td align="center">65</td>
+<td align="center">Minari</td>
+<td></td>
+<td align="center">36</td>
+<td align="center">26-34</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td></td>
+<td align="center">65</td>
+<td align="center">Minari</td>
+<td></td>
+<td align="center">42</td>
+<td align="center">31-40</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td></td>
+<td align="center">65</td>
+<td align="center">Minari</td>
+<td></td>
+<td align="center">54</td>
+<td align="center">40-52</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">66</td>
+<td align="center">Megari</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">29</td>
+<td align="center">Violectra</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td></td>
+<td align="center">72</td>
+<td align="center">Lighane</td>
+<td></td>
+<td align="center">54</td>
+<td align="center">40-52</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">72</td>
+<td align="center">Lighane</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">73</td>
+<td align="center">Driane</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td></td>
+<td align="center">43</td>
+<td align="center">Darbue</td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
-<h3 id="zanzarah-specific-files">ZanZarah specific files<a class="headerlink" href="#zanzarah-specific-files" title="Permanent link">&para;</a></h3>
+<h2 id="spells">Spells<a class="headerlink" href="#spells" title="Permanent link">&para;</a></h2>
+<p>For selecting the spells a fairies gets, the game first determines the <em>maximum spell cost</em> for attack and support based on a level rank. Then it gets all spells of the same element type (ignoring the fairy's capabilities) and chooses at random.</p>
+<h3 id="level-rank">Level Rank<a class="headerlink" href="#level-rank" title="Permanent link">&para;</a></h3>
+<p>The level rank is calculated with an integer division (always round down) by <em>5</em>, so examples:
+- <code>Level = 4  |  Rank =  4 / 5 = 0</code>
+- <code>Level = 9  |  Rank =  9 / 5 = 1</code>
+- <code>Level = 10 |  Rank = 10 / 5 = 2</code></p>
+<p>Then the maximum costs can be figured out by this table:</p>
 <table>
 <thead>
 <tr>
-<th>File extension</th>
-<th align="center">Reading</th>
-<th align="center">Writing</th>
-<th align="center">Render</th>
-<th align="center">Wiki</th>
-<th>Exports</th>
-<th>Imports</th>
+<th align="center">Rank</th>
+<th></th>
+<th align="center">Maximum Attack Cost</th>
+<th align="center">Maximum Support Cost</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="resources/ED.md">ED (Effects)</a></td>
-<td align="center">Yes</td>
-<td align="center">No</td>
-<td align="center">No</td>
-<td align="center">No</td>
-<td>JSON</td>
-<td>None</td>
+<td align="center">0</td>
+<td></td>
+<td align="center">1</td>
+<td align="center">n/a</td>
 </tr>
 <tr>
-<td><a href="../resources/FBS/">FBS (Database)</a></td>
-<td align="center">Yes</td>
-<td align="center">No</td>
-<td align="center">N/A</td>
-<td align="center">Yes</td>
-<td>JSON, SQLite</td>
-<td>None</td>
+<td align="center">1</td>
+<td></td>
+<td align="center">1</td>
+<td align="center">n/a</td>
 </tr>
 <tr>
-<td><a href="../resources/AED/">AED (Actor description)</a></td>
-<td align="center">Yes</td>
-<td align="center">No</td>
-<td align="center">Yes</td>
-<td align="center">No</td>
-<td>JSON</td>
-<td>None</td>
+<td align="center">2</td>
+<td></td>
+<td align="center">1</td>
+<td align="center">1</td>
 </tr>
 <tr>
-<td><a href="../resources/SCN/">SCN (Scene description)</a></td>
-<td align="center">Yes</td>
-<td align="center">No</td>
-<td align="center">Yes</td>
-<td align="center">Partly</td>
-<td>JSON</td>
-<td>None</td>
+<td align="center">3</td>
+<td></td>
+<td align="center">2</td>
+<td align="center">1</td>
 </tr>
 <tr>
-<td><a href="../resources/DAT/">DAT (Savefiles)</a></td>
-<td align="center">No</td>
-<td align="center">No</td>
-<td align="center">N/A</td>
-<td align="center">Yes</td>
-<td>None</td>
-<td>None</td>
+<td align="center">4</td>
+<td></td>
+<td align="center">2</td>
+<td align="center">2</td>
 </tr>
 <tr>
-<td><a href="resources/CFG/CFG_Game.md">CFG (game.cfg)</a></td>
-<td align="center">No</td>
-<td align="center">No</td>
-<td align="center">N/A</td>
-<td align="center">No</td>
-<td>None</td>
-<td>None</td>
+<td align="center">5</td>
+<td></td>
+<td align="center">2</td>
+<td align="center">2</td>
 </tr>
 <tr>
-<td><a href="../resources/CFG/CFG_Map/">CFG (map.cfg)</a></td>
-<td align="center">Yes</td>
-<td align="center">No</td>
-<td align="center">N/A</td>
-<td align="center">Yes</td>
-<td>JSON</td>
-<td>None</td>
+<td align="center">6</td>
+<td></td>
+<td align="center">3</td>
+<td align="center">2</td>
 </tr>
 <tr>
-<td><a href="../resources/CFG/CFG_Vars/">CFG (ai.cfg/net.cfg/wizform.cfg)</a></td>
-<td align="center">Yes</td>
-<td align="center">No</td>
-<td align="center">N/A</td>
-<td align="center">Yes</td>
-<td>JSON</td>
-<td>None</td>
+<td align="center">7+</td>
+<td></td>
+<td align="center">3</td>
+<td align="center">3</td>
 </tr>
 </tbody>
 </table>
-<h2 id="other-documentation-to-be-done">Other documentation to be done<a class="headerlink" href="#other-documentation-to-be-done" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Section</th>
-<th align="center">Done</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Script commands - basic labeling</td>
-<td align="center">83/84</td>
-</tr>
-<tr>
-<td>Script commands - full reference</td>
-<td align="center">0/84</td>
-</tr>
-<tr>
-<td>Backdrop descriptions</td>
-<td align="center">0/19</td>
-</tr>
-<tr>
-<td>Trigger type descriptions</td>
-<td align="center">25/56</td>
-</tr>
-<tr>
-<td>Behavior type descriptions</td>
-<td align="center">1/56</td>
-</tr>
-<tr>
-<td>Ambient sound descriptions</td>
-<td align="center">0/15</td>
-</tr>
-</tbody>
-</table>
+<h2 id="levelrangeid">LevelRangeId<a class="headerlink" href="#levelrangeid" title="Permanent link">&para;</a></h2>
+<p>The level selection based on the LevelRangeId follows this pseudocode:</p>
+<pre><code>int ampl = levelRangeId / 4;
+int base = levelRangeId - ampl - 1;
+int newLevel = base + rand() % ampl;
+</code></pre>
                 
               
               
