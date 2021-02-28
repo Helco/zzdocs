@@ -16,6 +16,10 @@ Every script is stored in the [database](../resources/FBS/index.md). There are 6
 ZanZarah scripts are written one command per line. The first character always denotes the command, after this there may be up to 3 arguments (decimal numbers or UIDs) seperated by a period.
 For every command character there exists a long form command that is more human-readable. These forms are extracted from the executable.
 
+## Control flow
+
+> TODO
+
 ## Implementations
 It seems like there are four different implementations and the base implementation which triggers errors for every command except the pure structural ones:
 </br>The implementations may use the following commands:
@@ -120,22 +124,22 @@ exit
 |  %   |     0    | exit                  | stops script execution
 |  '   |     3    | wizform               | [adds a fairy](./script commands/wizform.md)
 |  (   |     3    | spell                 | [adds a spell](./script commands/spell.md)
-|  8   |     0    | else                  | sometimes refered as "item"
+|  8   |     0    | else                  | [see control flow](#control-flow), sometimes refered as "item"
 |  )   |     2    | changeWaypoint        |
 |  *   |     2    | fight                 | [starts a duel](./script commands/fight.md)
-|  +   |     2    | lookAtPlayer          |
-|  ,   |     1    | changeDatabase        |
+|  +   |     2    | lookAtPlayer          | [NPC looks at the player](./script commands/lookAtPlayer.md)
+|  ,   |     1    | changeDatabase        | NPC changes its database row (single fb0x05 UID argument) permanently
 |  -   |     0    | removeNpc             | [removes a NPC](./script commands/removeNpc.md)
 |  .   |     0    | catchWizform          |
-|  0   |     0    | killPlayer            |
-|  5   |     1    | tradingCurrency       |
-|  2   |     2    | tradingItem           |
-|  3   |     2    | tradingSpell          |
-|  4   |     2    | tradingWizform        |
-|  1   |     3    | givePlayerCards       |
-|  B   |     3    | setupGambling         |
-|  6   |     3    | ifPlayerHasCards      |
-|  @   |     2    | ifPlayerHasSpecials   |
+|  0   |     0    | killPlayer            | kills the player (captain obvious)
+|  5   |     1    | tradingCurrency       | sets the currency item by single fb0x04 UID argument
+|  2   |     2    | tradingItem           | adds a buyable item with a price (first arg) and a fb0x04 UID argument
+|  3   |     2    | tradingSpell          | adds a buyable spell with a price (first arg) and a fb0x03 UID argument
+|  4   |     2    | tradingWizform        | adds a buyable fairy with a price (first arg) and a fb0x01 UID argument
+|  1   |     3    | givePlayerCards       | [adds cards (item/spell/fairy) to the player](./script commands/givePlayerCards.md)
+|  B   |     3    | setupGambling         | [adds chances for cards/blanks](./script commands/setupGambling.md)
+|  6   |     3    | ifPlayerHasCards      | [branches based on cards in inventory](./script commands/ifPlayerHasCards.md)
+|  @   |     2    | ifPlayerHasSpecials   | [branches based on special conditions](./script commands/ifPlayerHasSpecials.md)
 |  =   |     1    | ifTriggerIsActive     |
 |  9   |     3    | removePlayerCards     |
 |  :   |     2    | moveSystem            |
@@ -183,7 +187,7 @@ exit
 |  h   |     0    | endActorEffect        |
 |  i   |     1    | createSceneObjects    |
 |  j   |     1    | evolveWizForm         |
-|  k   |     1    | removeBehavior       |
+|  k   |     1    | removeBehavior        |
 |  l   |     2    | unlockDoor            |
 |  m   |     0    | endGame               |
 |  n   |     3    | defaultDeck           |
