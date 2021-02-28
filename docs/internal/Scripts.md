@@ -111,21 +111,21 @@ exit
 
 | Char | Max args |          Name         | Description |
 |:----:|:--------:|-----------------------|-------------|
-|  !   |     2    | say                   | [see reference](./script commands/say.md)
-|  C   |     1    | setModel              |
+|  !   |     2    | say                   | [triggers a dialog line](./script commands/say.md)
+|  C   |     1    | setModel              | single arg is name of [AED file](../resources/AED.md)
 |  "   |     2    | choice                |
 |  #   |     0    | waitForUser           |
-|  $   |     1    | label                 |
-|  &   |     1    | setCamera             | [see reference](./script commands/setCamera.md)
-|  %   |     0    | exit                  |
-|  '   |     3    | wizform               |
-|  (   |     3    | spell                 |
+|  $   |     1    | label                 | single arg is numeric label identifier, used with goto command
+|  &   |     1    | setCamera             | [moves the camera](./script commands/setCamera.md)
+|  %   |     0    | exit                  | stops script execution
+|  '   |     3    | wizform               | [adds a fairy](./script commands/wizform.md)
+|  (   |     3    | spell                 | [adds a spell](./script commands/spell.md)
 |  8   |     0    | else                  | sometimes refered as "item"
 |  )   |     2    | changeWaypoint        |
-|  *   |     2    | fight                 |
+|  *   |     2    | fight                 | [starts a duel](./script commands/fight.md)
 |  +   |     2    | lookAtPlayer          |
 |  ,   |     1    | changeDatabase        |
-|  -   |     0    | removeNpc             | [see reference](./script commands/removeNpc.md)
+|  -   |     0    | removeNpc             | [removes a NPC](./script commands/removeNpc.md)
 |  .   |     0    | catchWizform          |
 |  0   |     0    | killPlayer            |
 |  5   |     1    | tradingCurrency       |
