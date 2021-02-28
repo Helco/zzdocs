@@ -18,7 +18,7 @@ Savegames stored in DAT files consist of various sections. The main parts of it 
 |  4B  | uint | PixieCount | The total amount of pixies catched by the player |
 |  4B  | uint | GlobalVars | The count of global variables (always 49) |
 |      |[GlobalVar[]](../internal/GlobalVars.md#data-format)| GlobalVars | The global variables |
-|  4B  | uint | SwitchGameMinTries | The minimal count of tries for the [[switch game|SwitchGame]] |
+|  4B  | uint | SwitchGameMinTries | The minimal count of tries for the switch game |
 
 ## GameStateScene
 
