@@ -27,7 +27,7 @@ It seems like there are four different implementations and the base implementati
 1. `setModel, setCamera, wizform, spell, changeWaypoint, lookAtPlayer, removeNpc, ifTriggerIsActive, moveSystem, movementSpeed,
    lockUserInput, playAnimation, startPrelude, setNpcType, deployNpcAtTrigger, ifCloseToWaypoint, ifNpcModifierHasValue,
    setNpcModifier, defaultWizform, idle, ifPlayerIsClose, setCollision, createDynamicItems, revive, lookAtTrigger`
-2. `modifySpeed, ifIsWizform`
+2. `modifyWizform, ifIsWizform`
 3. `say, choice, waitForUser, setCamera, changeWaypoint, fight, changeDatabase, removeNpc, catchWizform, killPlayer, tradingCurrency,
    tradingItem, tradingSpell, tradingWizform, givePlayerCards, setupGambling, ifPlayerHasCards, ifPlayerHasSpecials,
    ifTriggerIsActive, removePlayerCards, lockUserInput, modifyTrigger, playAnimation, npcWizFormEscapes, talk, chafferWizForms,
@@ -141,10 +141,10 @@ exit
 |  6   |     3    | ifPlayerHasCards      | [branches based on cards in inventory](./script commands/ifPlayerHasCards.md)
 |  @   |     2    | ifPlayerHasSpecials   | [branches based on special conditions](./script commands/ifPlayerHasSpecials.md)
 |  =   |     1    | ifTriggerIsActive     |
-|  9   |     3    | removePlayerCards     |
+|  9   |     3    | removePlayerCards     | [removes cards from the players inventory](./script commands/removePlayerCards.md)
 |  :   |     2    | moveSystem            |
-|  ?   |     1    | movementSpeed         |
-|  ;   |     2    | modifyWizform         |
+|  ?   |     1    | movementSpeed         | Sets the movement speed to a tenth of the single numerical parameter
+|  ;   |     2    | modifyWizform         | [Changes the triggered fairy](./script commands/modifyWizform.md)
 |  <   |     1    | lockUserInput         |
 |  >   |     3    | modifyTrigger         |
 |  A   |     2    | playAnimation         |
