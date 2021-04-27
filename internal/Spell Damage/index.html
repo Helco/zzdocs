@@ -1444,15 +1444,15 @@
 <ul>
 <li><code>BaseDmg</code> <br/> As per the damage stat of the spell this is <code>50, 65, 70, 95, 110</code></li>
 <li><code>ClassF</code> <br/> Class effectiveness with <code>1</code> being neutral, <code>3</code> very effective, <code>1/3</code> not effective</li>
-<li><code>SupportAttackF</code> <br/> A more damage support behavior on the attacking fairy</li>
-<li><code>SupportDefenseF</code> <br/> A less damage support behavior on the defensing fairy</li>
-<li><code>CritF</code> <br/> A more damage on critical support behavior on the attacking fairy</li>
+<li><code>SupportAttackF</code> <br/> A <em>more damage</em> support behavior on the attacking fairy</li>
+<li><code>SupportDefenseF</code> <br/> A <em>less damage taken</em> support behavior on the defensing fairy</li>
+<li><code>CritF</code> <br/> A <em>more damage on critical</em> support behavior on the attacking fairy</li>
 <li><code>ChargeF</code> <br/> The amount of charge-up before firing (from 0 to 1)</li>
 <li><code>Level</code> <br/> The level of the attacking fairy</li>
 </ul>
 <p>Then we can calculate intermediaries:</p>
 <ul>
-<li><code>LevelF = Level / 6</code></li>
+<li><code>LevelF = Level / 60</code></li>
 <li><code>SpellF = CritF * SupportAttackF * SupportDefenseF * ClassF * ChargeF * -1</code></li>
 <li><code>FinalF = SpellF * LevelF * 0.95 + SpellF * 0.05</code></li>
 </ul>
