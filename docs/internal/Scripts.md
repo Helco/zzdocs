@@ -5,11 +5,11 @@ Every script is stored in the [database](../resources/FBS/index.md). There are 6
 
 | Module                               | Column | [Impl.](#implementations) | Description |
 |:------------------------------------:|:------:|:---:|-----------------------------------|
-| [fb0x01](../resources/FBS/fb0x01.md) | Script1 | 3 | This script is executed when the NPC is activated, it often contains dialog control |
-| [fb0x01](../resources/FBS/fb0x01.md) | Script2 | 1 | This script seems to be executed when the NPC is deployed, it mostly contains `setModel` instructions |
-| [fb0x01](../resources/FBS/fb0x01.md) | Script3 | 1 | This script seems to be executed on a cyclic basis, but the details are not known yet |
-| [fb0x01](../resources/FBS/fb0x01.md) | Script4 | 3 | This script is executed if the player wins a fight against the NPC |
-| [fb0x01](../resources/FBS/fb0x01.md) | Script5 | 3 | This script is executed if the player loses a fight against the NPC, mostly contains `killPlayer` instructions |
+| [fb0x01](../resources/FBS/fb0x05.md) | Script1 | 3 | This script is executed when the NPC is activated, it often contains dialog control |
+| [fb0x01](../resources/FBS/fb0x05.md) | Script2 | 1 | This script seems to be executed when the NPC is deployed, it mostly contains `setModel` instructions |
+| [fb0x01](../resources/FBS/fb0x05.md) | Script3 | 1 | This script seems to be executed on a cyclic basis, but the details are not known yet |
+| [fb0x01](../resources/FBS/fb0x05.md) | Script4 | 3 | This script is executed if the player wins a fight against the NPC |
+| [fb0x01](../resources/FBS/fb0x05.md) | Script5 | 3 | This script is executed if the player loses a fight against the NPC, mostly contains `killPlayer` instructions |
 | [fb0x04](../resources/FBS/fb0x04.md) | Script  | 2 | This script is executed when the item is used on some fairy. It does everything from healing to evolving |
 
 ## General format
@@ -30,7 +30,7 @@ It seems like there are four different implementations and the base implementati
    lockUserInput, playAnimation, startPrelude, setNpcType, deployNpcAtTrigger, ifCloseToWaypoint, ifNpcModifierHasValue,
    setNpcModifier, defaultWizform, idle, ifPlayerIsClose, setCollision, createDynamicItems, revive, lookAtTrigger`
 2. `modifyWizform, ifIsWizform`
-3. `say, choice, waitForUser, setCamera, changeWaypoint, fight, changeDatabase, removeNpc, catchWizform, killPlayer, tradingCurrency,
+3. `ask, say, choice, waitForUser, setCamera, changeWaypoint, fight, changeDatabase, removeNpc, catchWizform, killPlayer, tradingCurrency,
    tradingItem, tradingSpell, tradingWizform, givePlayerCards, setupGambling, ifPlayerHasCards, ifPlayerHasSpecials,
    ifTriggerIsActive, removePlayerCards, lockUserInput, modifyTrigger, playAnimation, npcWizFormEscapes, talk, chafferWizForms,
    deployNpcAtTrigger, delay, removeWizForms, ifNpcModifierHasValue, setNpcModifier, ifPlayerIsClose, ifNumberOfNpcsIs,
