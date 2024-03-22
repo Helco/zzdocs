@@ -5,12 +5,12 @@ Every script is stored in the [database](../resources/FBS/index.md). There are 6
 
 | Module                               | Column | [Impl.](#implementations) | Description |
 |:------------------------------------:|:------:|:---:|-----------------------------------|
-| [fb0x01](../resources/FBS/fb0x05.md) | Script1 | 3 | This script is executed when the NPC is activated, it often contains dialog control |
-| [fb0x01](../resources/FBS/fb0x05.md) | Script2 | 1 | This script seems to be executed when the NPC is deployed, it mostly contains `setModel` instructions |
-| [fb0x01](../resources/FBS/fb0x05.md) | Script3 | 1 | This script seems to be executed on a cyclic basis, but the details are not known yet |
-| [fb0x01](../resources/FBS/fb0x05.md) | Script4 | 3 | This script is executed if the player wins a fight against the NPC |
-| [fb0x01](../resources/FBS/fb0x05.md) | Script5 | 3 | This script is executed if the player loses a fight against the NPC, mostly contains `killPlayer` instructions |
-| [fb0x04](../resources/FBS/fb0x04.md) | Script  | 2 | This script is executed when the item is used on some fairy. It does everything from healing to evolving |
+| [fb0x01](../resources/FBS/fb0x05.md) | NPC Trigger | 3 | This script is executed when the NPC is activated, it often contains dialog control |
+| [fb0x01](../resources/FBS/fb0x05.md) | NPC Init | 1 | This script seems to be executed when the NPC is deployed, it mostly contains `setModel` instructions |
+| [fb0x01](../resources/FBS/fb0x05.md) | NPC Update | 1 | This script seems to be executed on a cyclic basis, but the details are not known yet |
+| [fb0x01](../resources/FBS/fb0x05.md) | NPC Victory | 3 | This script is executed if the player wins a fight against the NPC |
+| [fb0x01](../resources/FBS/fb0x05.md) | NPC Defeat | 3 | This script is executed if the player loses a fight against the NPC, mostly contains `killPlayer` instructions |
+| [fb0x04](../resources/FBS/fb0x04.md) | Item Use  | 2 | This script is executed when the item is used on some fairy. It does everything from healing to evolving |
 
 ## General format
 ZanZarah scripts are written one command per line. The first character always denotes the command, after this there may be up to 3 arguments (decimal numbers or UIDs) seperated by a period.
@@ -26,18 +26,18 @@ Some commands pause the current execution, so that it *can* be continued at a la
 It seems like there are four different implementations and the base implementation which triggers errors for every command except the pure structural ones:
 </br>The implementations may use the following commands:
 
-1. `setModel, setCamera, wizform, spell, changeWaypoint, lookAtPlayer, removeNpc, ifTriggerIsActive, moveSystem, movementSpeed,
+1. (NPC Init/Update) `setModel, setCamera, wizform, spell, changeWaypoint, lookAtPlayer, removeNpc, ifTriggerIsActive, moveSystem, movementSpeed,
    lockUserInput, playAnimation, startPrelude, setNpcType, deployNpcAtTrigger, ifCloseToWaypoint, ifNpcModifierHasValue,
    setNpcModifier, defaultWizform, idle, ifPlayerIsClose, setCollision, createDynamicItems, revive, lookAtTrigger`
-2. `modifyWizform, ifIsWizform`
-3. `ask, say, choice, waitForUser, setCamera, changeWaypoint, fight, changeDatabase, removeNpc, catchWizform, killPlayer, tradingCurrency,
+2. (Item Use) `modifyWizform, ifIsWizform`
+3. (NPC Trigger/Victory/Defeat) `ask, say, choice, waitForUser, setCamera, changeWaypoint, fight, changeDatabase, removeNpc, catchWizform, killPlayer, tradingCurrency,
    tradingItem, tradingSpell, tradingWizform, givePlayerCards, setupGambling, ifPlayerHasCards, ifPlayerHasSpecials,
    ifTriggerIsActive, removePlayerCards, lockUserInput, modifyTrigger, playAnimation, npcWizFormEscapes, talk, chafferWizForms,
    deployNpcAtTrigger, delay, removeWizForms, ifNpcModifierHasValue, setNpcModifier, ifPlayerIsClose, ifNumberOfNpcsIs,
    startEffect, setTalkLabels, tradeWizform, createDynamicItems, playVideo, removeNpcAtTrigger, revive, ifTriggerIsEnabled,
    playSound, playInArena, endActorEffect, createSceneObjects, removeBehavior, unlockDoor, endGame, subGame, modifyEffect,
    playPlayerAnimation, playAmyVoice, createDynamicModel, deploySound, givePlayerPresent`
-4. `dance`
+4. (Unused rhythm minigame) `dance`
 
 The purely structural commands that are always available are: `else, setGlobal, beginIf_global, goto, gotoRandomLabel, gotoLabelByRandom, endIf, label, exit`
 
@@ -46,7 +46,7 @@ There are several default scripts hidden in the executable, three of which refer
 
 ### Wild fairy attacks player (executed as NPC script 1)
 ```
-fightInArena0.0
+playInArena0.0
 exit
 ```
 
