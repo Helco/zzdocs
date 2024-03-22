@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
       
       
 
@@ -2514,37 +2514,37 @@
 <tbody>
 <tr>
 <td style="text-align: center;"><a href="../../resources/FBS/fb0x05/">fb0x01</a></td>
-<td style="text-align: center;">Script1</td>
+<td style="text-align: center;">NPC Trigger</td>
 <td style="text-align: center;">3</td>
 <td>This script is executed when the NPC is activated, it often contains dialog control</td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="../../resources/FBS/fb0x05/">fb0x01</a></td>
-<td style="text-align: center;">Script2</td>
+<td style="text-align: center;">NPC Init</td>
 <td style="text-align: center;">1</td>
 <td>This script seems to be executed when the NPC is deployed, it mostly contains <code>setModel</code> instructions</td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="../../resources/FBS/fb0x05/">fb0x01</a></td>
-<td style="text-align: center;">Script3</td>
+<td style="text-align: center;">NPC Update</td>
 <td style="text-align: center;">1</td>
 <td>This script seems to be executed on a cyclic basis, but the details are not known yet</td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="../../resources/FBS/fb0x05/">fb0x01</a></td>
-<td style="text-align: center;">Script4</td>
+<td style="text-align: center;">NPC Victory</td>
 <td style="text-align: center;">3</td>
 <td>This script is executed if the player wins a fight against the NPC</td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="../../resources/FBS/fb0x05/">fb0x01</a></td>
-<td style="text-align: center;">Script5</td>
+<td style="text-align: center;">NPC Defeat</td>
 <td style="text-align: center;">3</td>
 <td>This script is executed if the player loses a fight against the NPC, mostly contains <code>killPlayer</code> instructions</td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="../../resources/FBS/fb0x04/">fb0x04</a></td>
-<td style="text-align: center;">Script</td>
+<td style="text-align: center;">Item Use</td>
 <td style="text-align: center;">2</td>
 <td>This script is executed when the item is used on some fairy. It does everything from healing to evolving</td>
 </tr>
@@ -2562,24 +2562,24 @@ For every command character there exists a long form command that is more human-
 <p>It seems like there are four different implementations and the base implementation which triggers errors for every command except the pure structural ones:
 </br>The implementations may use the following commands:</p>
 <ol>
-<li><code>setModel, setCamera, wizform, spell, changeWaypoint, lookAtPlayer, removeNpc, ifTriggerIsActive, moveSystem, movementSpeed,
+<li>(NPC Init/Update) <code>setModel, setCamera, wizform, spell, changeWaypoint, lookAtPlayer, removeNpc, ifTriggerIsActive, moveSystem, movementSpeed,
    lockUserInput, playAnimation, startPrelude, setNpcType, deployNpcAtTrigger, ifCloseToWaypoint, ifNpcModifierHasValue,
    setNpcModifier, defaultWizform, idle, ifPlayerIsClose, setCollision, createDynamicItems, revive, lookAtTrigger</code></li>
-<li><code>modifyWizform, ifIsWizform</code></li>
-<li><code>ask, say, choice, waitForUser, setCamera, changeWaypoint, fight, changeDatabase, removeNpc, catchWizform, killPlayer, tradingCurrency,
+<li>(Item Use) <code>modifyWizform, ifIsWizform</code></li>
+<li>(NPC Trigger/Victory/Defeat) <code>ask, say, choice, waitForUser, setCamera, changeWaypoint, fight, changeDatabase, removeNpc, catchWizform, killPlayer, tradingCurrency,
    tradingItem, tradingSpell, tradingWizform, givePlayerCards, setupGambling, ifPlayerHasCards, ifPlayerHasSpecials,
    ifTriggerIsActive, removePlayerCards, lockUserInput, modifyTrigger, playAnimation, npcWizFormEscapes, talk, chafferWizForms,
    deployNpcAtTrigger, delay, removeWizForms, ifNpcModifierHasValue, setNpcModifier, ifPlayerIsClose, ifNumberOfNpcsIs,
    startEffect, setTalkLabels, tradeWizform, createDynamicItems, playVideo, removeNpcAtTrigger, revive, ifTriggerIsEnabled,
    playSound, playInArena, endActorEffect, createSceneObjects, removeBehavior, unlockDoor, endGame, subGame, modifyEffect,
    playPlayerAnimation, playAmyVoice, createDynamicModel, deploySound, givePlayerPresent</code></li>
-<li><code>dance</code></li>
+<li>(Unused rhythm minigame) <code>dance</code></li>
 </ol>
 <p>The purely structural commands that are always available are: <code>else, setGlobal, beginIf_global, goto, gotoRandomLabel, gotoLabelByRandom, endIf, label, exit</code></p>
 <h2 id="default-scripts">Default scripts<a class="headerlink" href="#default-scripts" title="Permanent link">&para;</a></h2>
 <p>There are several default scripts hidden in the executable, three of which refer to wild fairies attacking the player, the fourth one sets up some fight with 5 fairies. This last one is most likely a debug fight.</p>
 <h3 id="wild-fairy-attacks-player-executed-as-npc-script-1">Wild fairy attacks player (executed as NPC script 1)<a class="headerlink" href="#wild-fairy-attacks-player-executed-as-npc-script-1" title="Permanent link">&para;</a></h3>
-<pre><code>fightInArena0.0
+<pre><code>playInArena0.0
 exit
 </code></pre>
 <h3 id="player-wins-a-fight-against-a-wild-fairy-executed-as-npc-script-4">Player wins a fight against a wild fairy (executed as NPC script 4)<a class="headerlink" href="#player-wins-a-fight-against-a-wild-fairy-executed-as-npc-script-4" title="Permanent link">&para;</a></h3>
@@ -3327,7 +3327,7 @@ exit
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
   </body>
